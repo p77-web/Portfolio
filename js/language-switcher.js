@@ -15,7 +15,7 @@ var language = {
 		title: "Hi! I'm",
 		subtitle: 'Junior Developer',
 		resume: 'Download resume',
-		carousel: 'I work on',
+		carousel: 'I like',
 
 		// About section
 		about_me: 'About me',
@@ -42,7 +42,7 @@ var language = {
 		title: 'Je suis',
 		subtitle: 'Développeur Junior',
 		resume: 'Télécharger CV',
-		carousel: 'Je fais du',
+		carousel: "J'aime le",
 
 		// About section
 		about_me: 'À propos',

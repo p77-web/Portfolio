@@ -24,19 +24,12 @@ menu_input.addEventListener('click', e => {
 	}
 
 	if (isClicked) {
-		// icon.classList.remove('fa-bars');
-		// icon.classList.add('fa-times');
-		hamburger.firstElementChild.setAttribute('style', 'animation: menu-animation-red .5s ease-in forwards;');
-
+		hamburger.firstElementChild.setAttribute('style', 'animation: menu-animation-red 1s ease-in forwards;');
 		isClicked = false;
 	} else {
-		// icon.classList.remove('fa-times');
-		// icon.classList.add('fa-bars');
 		hamburger.firstElementChild.setAttribute('style', 'animation: menu-animation-blue 1s ease-in forwards;');
-
 		isClicked = true;
 	}
-	e.preventDefault();
 });
 
 hamburger.addEventListener('click', e => {

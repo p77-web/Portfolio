@@ -119,7 +119,15 @@
 }
 
 @keyframes menu-animation-red {
-	to {
+	0% {
+		stroke-dashoffset: 0;
+		stroke: #ff5800;
+	}
+	50% {
+		stroke-dashoffset: 63;
+		stroke: #ff5800;
+	}
+	100% {
 		stroke-dashoffset: 0;
 		stroke: #ff5800;
 	}
