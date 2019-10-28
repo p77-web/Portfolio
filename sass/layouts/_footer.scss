@@ -1,0 +1,80 @@
+/**
+* footer.scss
+*/
+
+/**
+* contact style
+*/
+.contact {
+	background-color: $footer-bg-color;
+	grid-column: grid-start / grid-end;
+
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+
+	// contact icons style
+	&__icons {
+		justify-self: center;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		width: 50%;
+		height: 4rem;
+
+		@include responsive(phone) {
+			width: 40%;
+		}
+
+		@include responsive(tab-port) {
+			width: 30%;
+			height: 5rem;
+		}
+
+		@include responsive(tab-land) {
+			width: 25%;
+		}
+
+		@include responsive(big-desktop) {
+			width: 20%;
+			height: 6rem;
+		}
+	}
+
+	// icon style
+	&__icon {
+		cursor: pointer;
+		fill: $primary-color;
+		width: 2rem;
+		height: 2rem;
+
+		@include responsive(tab-port) {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+
+		&--copyright {
+			cursor: default;
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+	}
+}
+
+/**
+* copyright style
+*/
+.copyright {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__text {
+		font-size: 1rem;
+		color: $primary-color;
+		padding-left: 0.5rem;
+	}
+}

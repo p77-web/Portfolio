@@ -1,0 +1,20 @@
+/**
+* main.scss
+*/
+
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+
+@import 'components/button';
+@import 'components/scroll-up';
+
+@import 'layouts/header';
+@import 'layouts/navigation';
+@import 'layouts/about';
+@import 'layouts/languages';
+@import 'layouts/projects';
+@import 'layouts/footer';

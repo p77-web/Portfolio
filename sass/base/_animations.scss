@@ -1,0 +1,156 @@
+// navigation animations
+@keyframes slideIn {
+	from {
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes logo {
+	0% {
+		transform: translateX(-20px);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+// header animations
+@keyframes image-scale {
+	from {
+		transform: scale(1);
+	}
+
+	to {
+		transform: scale(1.02);
+	}
+}
+
+@keyframes anim-curlyBrackets {
+	from {
+		opacity: 0.3;
+	}
+
+	to {
+		opacity: 0.8;
+	}
+}
+
+// header image animation
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px) scale(0.7);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+// header words animation
+@keyframes word {
+	0% {
+		opacity: 0;
+		color: $primary-color-darker;
+	}
+
+	30% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+
+	35% {
+		transform: skew(-20deg);
+		color: transparent;
+		text-shadow: 0 0 0 $primary-color-darker;
+	}
+
+	50% {
+		text-shadow: 0 0 40px $primary-color-darker;
+		transform: translate(20rem, -2rem);
+	}
+
+	70% {
+		text-shadow: 0 0 20px $primary-color-darker;
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(150%) translateX(0%);
+		opacity: 0;
+	}
+}
+
+// sign about animation
+@keyframes sign-about-animation {
+	to {
+		stroke-dashoffset: 0;
+		stroke: #4f9cc8;
+	}
+}
+
+// sign languages animation
+@keyframes sign-languages-animation {
+	to {
+		stroke-dashoffset: 0;
+		stroke: #ff5800;
+	}
+}
+
+// sign portfolio animation
+@keyframes sign-portfolio-animation {
+	to {
+		stroke-dashoffset: 0;
+		stroke: #4f9cc8;
+	}
+}
+
+// menu animation
+@-webkit-keyframes menu-animation-red {
+	to {
+		stroke-dashoffset: 0;
+		stroke: #ff5800;
+	}
+}
+
+@keyframes menu-animation-red {
+	to {
+		stroke-dashoffset: 0;
+		stroke: #ff5800;
+	}
+}
+
+@-webkit-keyframes menu-animation-blue {
+	0% {
+		stroke-dashoffset: 0;
+		stroke: #4f9cc8;
+	}
+	50% {
+		stroke-dashoffset: -63;
+		stroke: #4f9cc8;
+	}
+	100% {
+		stroke-dashoffset: 0;
+		stroke: #4f9cc8;
+	}
+}
+
+@keyframes menu-animation-blue {
+	0% {
+		stroke-dashoffset: 0;
+		stroke: #4f9cc8;
+	}
+	50% {
+		stroke-dashoffset: -63;
+		stroke: #4f9cc8;
+	}
+	100% {
+		stroke-dashoffset: 0;
+		stroke: #4f9cc8;
+	}
+}

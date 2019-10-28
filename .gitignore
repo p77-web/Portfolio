@@ -1,0 +1,14 @@
+node_modules
+css/header1.css
+img/img-unused
+js/test.js
+sass/abstracts/_functions.scss
+sass/base/_utilities.scss
+sass/components/_curlyBrackets.scss
+sass/layouts/_test.scss
+sass/pages
+index1.html
+infos.txt
+package1.json
+package.json
+package-lock.json

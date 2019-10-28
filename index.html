@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		
+		<script src="js/language-switcher.js"></script>
+
+		<link rel='icon' href='img/brand.svg' sizes="any" type="image/svg+xml">
+		<link rel="icon" type="image/png" href="img/logo.png" />
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+			integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"	crossorigin="anonymous" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Portfolio - Paul Farcas</title>
+	</head>
+	<body class="wrapper" data-spy="spy" data-target="#main-nav" id="home">
+		
+		<!-- HEADER -->
+		<header class="header">
+			<!-- <div id="hamburger"> -->
+				<!-- <span class="fas fa-bars"></span> -->
+			<button class="menu-btn" onclick="void(0)">
+				<svg id="hamburger" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" ontouchstart="touchStart(event);">
+					<circle cx="12.5" cy="12.5" r="10" stroke="#89bdda" stroke-width="3"/>
+				</svg>		
+			</button>		
+			<!-- </div> -->
+			<!-- .menu-toggle -->
+			<div class="overlay"></div>
+			<div class="navigation">
+				<nav>
+					<div class="nav__brand">
+						<a href="index.html">
+							<svg id="logo" width="50" height="40" viewBox="-10 -10 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0 3.65319e-08L16.369 0C19.1413 0 20.0067 0.497093 21.4429 1.49128C22.8791 2.48547 23.831 3.82946 24.2986 5.52326C24.7662 7.21706 25 9.40794 25 12.0959C25 14.6734 24.7662 16.8275 24.2986 18.5581C23.831 20.2519 22.8624 21.6143 21.3928 22.6453C19.9566 23.6764 17.8357 24.1919 15.0301 24.1919H4.30862V38H0V3.65319e-08ZM13.5 19.5C15.671 19.5 17.3347 19.5339 18.3367 19.0552C19.3387 18.5397 19.99 17.7665 20.2906 16.7355C20.5912 15.7045 20.7415 14.1579 20.7415 12.0959C20.7415 10.0339 20.5912 8.4874 20.2906 7.4564C20.0234 6.42539 19.3888 5.67054 18.3868 5.19186C17.4182 4.67636 15.8484 4.41861 13.6774 4.41861H4.30862V19.5H13.5Z"
+									fill="#B0EDFB"
+								/>
+								<path d="M1 37L1 1L16.1806 1L16.1806 3.5L3.50001 3.5L3.50001 20.5H14.3129L14.3129 23.221H3.50001L3.50001 37H1Z" fill="#514D50" />
+							</svg>
+						</a>
+					</div><!-- .nav-brand -->
+					<ul class="nav__links">
+						<li class="nav__item"><a href="#about" class="item translateText" data-key="about"></a></li>
+						<li class="nav__item"><a href="#languages" class="item translateText" data-key="languages"></a></li>
+						<li class="nav__item"><a href="#projects" class="item">Portfolio</a></li>
+						<li class="nav__item"><a href="#contact" class="item">Contact</a></li>
+						<li class="nav__item">
+							<div class="text-center" id="language">
+								<a class="translate translateText" id="languageSwitcher" data-key="buttonLanguage" onClick="changeLanguage()"></a>
+							</div>
+						</li>
+					</ul><!-- .nav__links -->
+				</nav><!-- nav -->
+			</div><!-- .navigation -->
+			
+			<div class="header-content">
+				<h1 class="heading-1 header-content__title translateText" data-key="title"></h1>
+				<h2 class="heading-2 header-content__subtitle translateText" data-key="subtitle"></h2>
+				<figure class="header__image"><img src="./img/devices.png" alt="Devices" class="header__images" /></figure>
+				<button class="btn btn__resume">
+					<span class="btn__active translateText" data-key="resume"></span>
+					<a href="" target="_blank" class="btn__inactive btn-pdf-link">
+						<svg class="btn__icon">
+							<use xlink:href="img/sprite.svg#icon-cloud-download"></use>
+						</svg>
+					</a>
+				</button><!-- button -->
+				<div class="text-box">
+					<div class="text-box__start text-box--blue translateText" data-key="carousel"></div>
+					<div class="text-box__end text-box--blue" id="word" data-period="3" data-words='web design, UI experience, mobile apps'></div>
+				</div><!-- .text-box -->
+			</div><!-- .header-content -->
+		</header><!-- HEADER -->
+		
+
+		<!-- ABOUT Section -->
+		<section class="about" id="about">
+			<h2 class="heading-2 about__subtitle translateText" data-key="about_me"></h2>
+			<div class="sign">
+				<!-- <svg viewBox="0 0 1044 205" id="sign" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M73.9999 40C-155.403 360.916 2411.86 126.622 0.5 2.49997" stroke="#75AABA" stroke-width="5"/>
+				</svg>-->
+				<svg viewBox="0 0 204 24" id="sign-about" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M93.2147 2C466.888 11.6555 -275.381 11.1057 123.629 22" stroke="#75AABA" stroke-width="2"/>
+				</svg>					
+			</div> 
+			<div class="about__wrapper">
+				<div class="about-card">
+					<h3 class="about-card__title heading-3 heading-3--darker translateText" data-key="experience"></h3>
+					<svg class="about-card__icon">
+						<use xlink:href="img/sprite.svg#icon-graduation-cap"></use>
+					</svg>
+					<p class="about-card__text translateText" data-key="experience_text"></p>
+				</div><!-- .about-card -->
+				<div class="about-card">
+					<h3 class="about-card__title heading-3 heading-3--darker translateText" data-key="time"></h3>
+					<svg class="about-card__icon">
+						<use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
+					</svg>
+					<p class="about-card__text translateText" data-key="time_text"></p>
+				</div><!-- .about-card -->
+			</div><!-- .about__wrapper -->
+		</section><!-- ABOUT Section -->
+
+
+		<!-- LANGUAGES Section -->
+		<section class="languages" id="languages">
+			<h2 class="heading-2 languages__subtitle translateText" data-key="skills"></h2>
+			<div class="sign">
+				<svg viewBox="0 0 204 24" id="sign-languages" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M93.2147 2C466.888 11.6555 -275.381 11.1057 123.629 22" stroke="#75AABA" stroke-width="2"/>
+				</svg>	
+			</div>
+			<div class="languages__wrapper">
+				<div class="languages-card" data-rate=".5">
+					<div class="languages__title languages__title--1">JS</div>
+					<div class="languages__bar languages__bar--1" data-percentage='30'>
+						<svg width="150" height="20" viewBox="0 0 201 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2.85745 0H198.293C201.055 3.952 201.268 6.05736 198.293 10H2.85745C-0.29026 6.36379 -0.427777 4.25317 2.85745 0Z" fill="#B0EDFB"/>
+							<path d="M2 19.9619C2 17.7747 2.334 16.0708 3.00199 14.8501C3.66998 13.6167 4.83897 13 6.50895 13C8.167 13 9.33002 13.6167 9.99801 14.8501C10.666 16.0708 11 17.7747 11 19.9619C11 22.1871 10.666 23.9164 9.99801 25.1499C9.33002 26.3833 8.167 27 6.50895 27C4.83897 27 3.66998 26.3833 3.00199 25.1499C2.334 23.9164 2 22.1871 2 19.9619ZM9.38966 19.9619C9.38966 18.8556 9.31809 17.921 9.17495 17.158C9.04374 16.3824 8.76342 15.7593 8.334 15.2888C7.9165 14.8183 7.30815 14.5831 6.50895 14.5831C5.69781 14.5831 5.07753 14.8183 4.64811 15.2888C4.23062 15.7593 3.9503 16.3824 3.80716 17.158C3.67594 17.921 3.61034 18.8556 3.61034 19.9619C3.61034 21.1063 3.67594 22.0663 3.80716 22.842C3.9503 23.6176 4.23062 24.2407 4.64811 24.7112C5.07753 25.1817 5.69781 25.4169 6.50895 25.4169C7.30815 25.4169 7.9165 25.1817 8.334 24.7112C8.76342 24.2407 9.04374 23.6176 9.17495 22.842C9.31809 22.0663 9.38966 21.1063 9.38966 19.9619Z" fill="#4f9cc8"/>
+							<path d="M175 14.7929V13.2098H177.806V27H176.433V14.7929H175Z" fill="#4f9cc8"/>
+							<path d="M181.631 19.9619C181.631 17.7747 181.909 16.0708 182.466 14.8501C183.023 13.6167 183.998 13 185.391 13C186.774 13 187.744 13.6167 188.301 14.8501C188.858 16.0708 189.137 17.7747 189.137 19.9619C189.137 22.1871 188.858 23.9164 188.301 25.1499C187.744 26.3833 186.774 27 185.391 27C183.998 27 183.023 26.3833 182.466 25.1499C181.909 23.9164 181.631 22.1871 181.631 19.9619ZM187.794 19.9619C187.794 18.8556 187.734 17.921 187.615 17.158C187.505 16.3824 187.272 15.7593 186.913 15.2888C186.565 14.8183 186.058 14.5831 185.391 14.5831C184.715 14.5831 184.197 14.8183 183.839 15.2888C183.491 15.7593 183.257 16.3824 183.138 17.158C183.028 17.921 182.974 18.8556 182.974 19.9619C182.974 21.1063 183.028 22.0663 183.138 22.842C183.257 23.6176 183.491 24.2407 183.839 24.7112C184.197 25.1817 184.715 25.4169 185.391 25.4169C186.058 25.4169 186.565 25.1817 186.913 24.7112C187.272 24.2407 187.505 23.6176 187.615 22.842C187.734 22.0663 187.794 21.1063 187.794 19.9619Z" fill="#4f9cc8"/>
+							<path d="M192.494 19.9619C192.494 17.7747 192.772 16.0708 193.329 14.8501C193.886 13.6167 194.861 13 196.254 13C197.637 13 198.607 13.6167 199.164 14.8501C199.721 16.0708 200 17.7747 200 19.9619C200 22.1871 199.721 23.9164 199.164 25.1499C198.607 26.3833 197.637 27 196.254 27C194.861 27 193.886 26.3833 193.329 25.1499C192.772 23.9164 192.494 22.1871 192.494 19.9619ZM198.657 19.9619C198.657 18.8556 198.597 17.921 198.478 17.158C198.368 16.3824 198.135 15.7593 197.776 15.2888C197.428 14.8183 196.921 14.5831 196.254 14.5831C195.578 14.5831 195.06 14.8183 194.702 15.2888C194.354 15.7593 194.12 16.3824 194.001 17.158C193.891 17.921 193.837 18.8556 193.837 19.9619C193.837 21.1063 193.891 22.0663 194.001 22.842C194.12 23.6176 194.354 24.2407 194.702 24.7112C195.06 25.1817 195.578 25.4169 196.254 25.4169C196.921 25.4169 197.428 25.1817 197.776 24.7112C198.135 24.2407 198.368 23.6176 198.478 22.842C198.597 22.0663 198.657 21.1063 198.657 19.9619Z" fill="#4f9cc8"/>
+							<defs>
+								<linearGradient id="bar1" x1="0%" y1="0%" x2="100%" y2="0%">
+									<stop offset="0%" style="stop-color:#3D4DB7;stop-opacity:1" />
+									<stop offset="0%" style="stop-color:#3D4DB7;stop-opacity:1" />
+									<stop offset="0%" style="stop-color:#89bdda;stop-opacity:1" />
+									<stop offset="100%" style="stop-color:#89bdda;stop-opacity:1" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</div><!-- .languages-bar -->
+					<div class="languages__percentage" id="languages__percentage" data-percentage='30'><span>%</span></div>
+				</div><!-- .languages-card -->
+
+				<div class="languages-card" data-rate=".5">
+					<div class="languages__title languages__title--2">HTML5</div>
+					<div class="languages__bar languages__bar--2" data-percentage='70'>
+						<svg width="150" height="20" viewBox="0 0 201 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2.85745 0H198.293C201.055 3.952 201.268 6.05736 198.293 10H2.85745C-0.29026 6.36379 -0.427777 4.25317 2.85745 0Z" fill="#B0EDFB"/>
+							<path d="M2 19.9619C2 17.7747 2.334 16.0708 3.00199 14.8501C3.66998 13.6167 4.83897 13 6.50895 13C8.167 13 9.33002 13.6167 9.99801 14.8501C10.666 16.0708 11 17.7747 11 19.9619C11 22.1871 10.666 23.9164 9.99801 25.1499C9.33002 26.3833 8.167 27 6.50895 27C4.83897 27 3.66998 26.3833 3.00199 25.1499C2.334 23.9164 2 22.1871 2 19.9619ZM9.38966 19.9619C9.38966 18.8556 9.31809 17.921 9.17495 17.158C9.04374 16.3824 8.76342 15.7593 8.334 15.2888C7.9165 14.8183 7.30815 14.5831 6.50895 14.5831C5.69781 14.5831 5.07753 14.8183 4.64811 15.2888C4.23062 15.7593 3.9503 16.3824 3.80716 17.158C3.67594 17.921 3.61034 18.8556 3.61034 19.9619C3.61034 21.1063 3.67594 22.0663 3.80716 22.842C3.9503 23.6176 4.23062 24.2407 4.64811 24.7112C5.07753 25.1817 5.69781 25.4169 6.50895 25.4169C7.30815 25.4169 7.9165 25.1817 8.334 24.7112C8.76342 24.2407 9.04374 23.6176 9.17495 22.842C9.31809 22.0663 9.38966 21.1063 9.38966 19.9619Z" fill="#4f9cc8"/>
+							<path d="M175 14.7929V13.2098H177.806V27H176.433V14.7929H175Z" fill="#4f9cc8"/>
+							<path d="M181.631 19.9619C181.631 17.7747 181.909 16.0708 182.466 14.8501C183.023 13.6167 183.998 13 185.391 13C186.774 13 187.744 13.6167 188.301 14.8501C188.858 16.0708 189.137 17.7747 189.137 19.9619C189.137 22.1871 188.858 23.9164 188.301 25.1499C187.744 26.3833 186.774 27 185.391 27C183.998 27 183.023 26.3833 182.466 25.1499C181.909 23.9164 181.631 22.1871 181.631 19.9619ZM187.794 19.9619C187.794 18.8556 187.734 17.921 187.615 17.158C187.505 16.3824 187.272 15.7593 186.913 15.2888C186.565 14.8183 186.058 14.5831 185.391 14.5831C184.715 14.5831 184.197 14.8183 183.839 15.2888C183.491 15.7593 183.257 16.3824 183.138 17.158C183.028 17.921 182.974 18.8556 182.974 19.9619C182.974 21.1063 183.028 22.0663 183.138 22.842C183.257 23.6176 183.491 24.2407 183.839 24.7112C184.197 25.1817 184.715 25.4169 185.391 25.4169C186.058 25.4169 186.565 25.1817 186.913 24.7112C187.272 24.2407 187.505 23.6176 187.615 22.842C187.734 22.0663 187.794 21.1063 187.794 19.9619Z" fill="#4f9cc8"/>
+							<path d="M192.494 19.9619C192.494 17.7747 192.772 16.0708 193.329 14.8501C193.886 13.6167 194.861 13 196.254 13C197.637 13 198.607 13.6167 199.164 14.8501C199.721 16.0708 200 17.7747 200 19.9619C200 22.1871 199.721 23.9164 199.164 25.1499C198.607 26.3833 197.637 27 196.254 27C194.861 27 193.886 26.3833 193.329 25.1499C192.772 23.9164 192.494 22.1871 192.494 19.9619ZM198.657 19.9619C198.657 18.8556 198.597 17.921 198.478 17.158C198.368 16.3824 198.135 15.7593 197.776 15.2888C197.428 14.8183 196.921 14.5831 196.254 14.5831C195.578 14.5831 195.06 14.8183 194.702 15.2888C194.354 15.7593 194.12 16.3824 194.001 17.158C193.891 17.921 193.837 18.8556 193.837 19.9619C193.837 21.1063 193.891 22.0663 194.001 22.842C194.12 23.6176 194.354 24.2407 194.702 24.7112C195.06 25.1817 195.578 25.4169 196.254 25.4169C196.921 25.4169 197.428 25.1817 197.776 24.7112C198.135 24.2407 198.368 23.6176 198.478 22.842C198.597 22.0663 198.657 21.1063 198.657 19.9619Z" fill="#4f9cc8"/>
+							<defs>
+								<linearGradient id="bar2" x1="0%" y1="0%" x2="100%" y2="0%">
+									<stop offset="0%" style="stop-color:#e34c26;stop-opacity:1" />
+									<stop offset="0%" style="stop-color:#e34c26;stop-opacity:1" />
+									<stop offset="0%" style="stop-color:#89bdda;stop-opacity:1" />
+									<stop offset="100%" style="stop-color:#89bdda;stop-opacity:1" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</div><!-- .languages-bar -->
+					<div class="languages__percentage" id="languages__percentage" data-percentage='70'><span>%</span></div>
+				</div><!-- .languages-card -->
+
+				<div class="languages-card" data-rate=".5">
+					<div class="languages__title languages__title--3">CSS3</div>
+					<div class="languages__bar languages__bar--3" data-percentage='60'>
+						<svg width="150" height="20" viewBox="0 0 201 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2.85745 0H198.293C201.055 3.952 201.268 6.05736 198.293 10H2.85745C-0.29026 6.36379 -0.427777 4.25317 2.85745 0Z" fill="#B0EDFB"/>
+							<path d="M2 19.9619C2 17.7747 2.334 16.0708 3.00199 14.8501C3.66998 13.6167 4.83897 13 6.50895 13C8.167 13 9.33002 13.6167 9.99801 14.8501C10.666 16.0708 11 17.7747 11 19.9619C11 22.1871 10.666 23.9164 9.99801 25.1499C9.33002 26.3833 8.167 27 6.50895 27C4.83897 27 3.66998 26.3833 3.00199 25.1499C2.334 23.9164 2 22.1871 2 19.9619ZM9.38966 19.9619C9.38966 18.8556 9.31809 17.921 9.17495 17.158C9.04374 16.3824 8.76342 15.7593 8.334 15.2888C7.9165 14.8183 7.30815 14.5831 6.50895 14.5831C5.69781 14.5831 5.07753 14.8183 4.64811 15.2888C4.23062 15.7593 3.9503 16.3824 3.80716 17.158C3.67594 17.921 3.61034 18.8556 3.61034 19.9619C3.61034 21.1063 3.67594 22.0663 3.80716 22.842C3.9503 23.6176 4.23062 24.2407 4.64811 24.7112C5.07753 25.1817 5.69781 25.4169 6.50895 25.4169C7.30815 25.4169 7.9165 25.1817 8.334 24.7112C8.76342 24.2407 9.04374 23.6176 9.17495 22.842C9.31809 22.0663 9.38966 21.1063 9.38966 19.9619Z" fill="#4f9cc8"/>
+							<path d="M175 14.7929V13.2098H177.806V27H176.433V14.7929H175Z" fill="#4f9cc8"/>
+							<path d="M181.631 19.9619C181.631 17.7747 181.909 16.0708 182.466 14.8501C183.023 13.6167 183.998 13 185.391 13C186.774 13 187.744 13.6167 188.301 14.8501C188.858 16.0708 189.137 17.7747 189.137 19.9619C189.137 22.1871 188.858 23.9164 188.301 25.1499C187.744 26.3833 186.774 27 185.391 27C183.998 27 183.023 26.3833 182.466 25.1499C181.909 23.9164 181.631 22.1871 181.631 19.9619ZM187.794 19.9619C187.794 18.8556 187.734 17.921 187.615 17.158C187.505 16.3824 187.272 15.7593 186.913 15.2888C186.565 14.8183 186.058 14.5831 185.391 14.5831C184.715 14.5831 184.197 14.8183 183.839 15.2888C183.491 15.7593 183.257 16.3824 183.138 17.158C183.028 17.921 182.974 18.8556 182.974 19.9619C182.974 21.1063 183.028 22.0663 183.138 22.842C183.257 23.6176 183.491 24.2407 183.839 24.7112C184.197 25.1817 184.715 25.4169 185.391 25.4169C186.058 25.4169 186.565 25.1817 186.913 24.7112C187.272 24.2407 187.505 23.6176 187.615 22.842C187.734 22.0663 187.794 21.1063 187.794 19.9619Z" fill="#4f9cc8"/>
+							<path d="M192.494 19.9619C192.494 17.7747 192.772 16.0708 193.329 14.8501C193.886 13.6167 194.861 13 196.254 13C197.637 13 198.607 13.6167 199.164 14.8501C199.721 16.0708 200 17.7747 200 19.9619C200 22.1871 199.721 23.9164 199.164 25.1499C198.607 26.3833 197.637 27 196.254 27C194.861 27 193.886 26.3833 193.329 25.1499C192.772 23.9164 192.494 22.1871 192.494 19.9619ZM198.657 19.9619C198.657 18.8556 198.597 17.921 198.478 17.158C198.368 16.3824 198.135 15.7593 197.776 15.2888C197.428 14.8183 196.921 14.5831 196.254 14.5831C195.578 14.5831 195.06 14.8183 194.702 15.2888C194.354 15.7593 194.12 16.3824 194.001 17.158C193.891 17.921 193.837 18.8556 193.837 19.9619C193.837 21.1063 193.891 22.0663 194.001 22.842C194.12 23.6176 194.354 24.2407 194.702 24.7112C195.06 25.1817 195.578 25.4169 196.254 25.4169C196.921 25.4169 197.428 25.1817 197.776 24.7112C198.135 24.2407 198.368 23.6176 198.478 22.842C198.597 22.0663 198.657 21.1063 198.657 19.9619Z" fill="#4f9cc8"/>
+							<defs>
+								<linearGradient id="bar3" x1="0%" y1="0%" x2="100%" y2="0%">
+									<stop offset="0%" style="stop-color:#0a71b9;stop-opacity:1" />
+									<stop offset="0%" style="stop-color:#0a71b9;stop-opacity:1" />
+									<stop offset="0%" style="stop-color:#89bdda;stop-opacity:1" />
+									<stop offset="100%" style="stop-color:#89bdda;stop-opacity:1" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</div><!-- .languages-bar -->
+					<div class="languages__percentage" id="languages__percentage" data-percentage='60'><span>%</span></div>
+				</div><!-- .languages-card -->
+
+				<div class="languages-card" data-rate=".5">
+					<div class="languages__title languages__title--4">Java</div>
+					<div class="languages__bar languages__bar--4" data-percentage='30'>
+						<svg width="150" height="20" viewBox="0 0 201 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2.85745 0H198.293C201.055 3.952 201.268 6.05736 198.293 10H2.85745C-0.29026 6.36379 -0.427777 4.25317 2.85745 0Z" fill="#B0EDFB"/>
+							<path d="M2 19.9619C2 17.7747 2.334 16.0708 3.00199 14.8501C3.66998 13.6167 4.83897 13 6.50895 13C8.167 13 9.33002 13.6167 9.99801 14.8501C10.666 16.0708 11 17.7747 11 19.9619C11 22.1871 10.666 23.9164 9.99801 25.1499C9.33002 26.3833 8.167 27 6.50895 27C4.83897 27 3.66998 26.3833 3.00199 25.1499C2.334 23.9164 2 22.1871 2 19.9619ZM9.38966 19.9619C9.38966 18.8556 9.31809 17.921 9.17495 17.158C9.04374 16.3824 8.76342 15.7593 8.334 15.2888C7.9165 14.8183 7.30815 14.5831 6.50895 14.5831C5.69781 14.5831 5.07753 14.8183 4.64811 15.2888C4.23062 15.7593 3.9503 16.3824 3.80716 17.158C3.67594 17.921 3.61034 18.8556 3.61034 19.9619C3.61034 21.1063 3.67594 22.0663 3.80716 22.842C3.9503 23.6176 4.23062 24.2407 4.64811 24.7112C5.07753 25.1817 5.69781 25.4169 6.50895 25.4169C7.30815 25.4169 7.9165 25.1817 8.334 24.7112C8.76342 24.2407 9.04374 23.6176 9.17495 22.842C9.31809 22.0663 9.38966 21.1063 9.38966 19.9619Z" fill="#4f9cc8"/>
+							<path d="M175 14.7929V13.2098H177.806V27H176.433V14.7929H175Z" fill="#4f9cc8"/>
+							<path d="M181.631 19.9619C181.631 17.7747 181.909 16.0708 182.466 14.8501C183.023 13.6167 183.998 13 185.391 13C186.774 13 187.744 13.6167 188.301 14.8501C188.858 16.0708 189.137 17.7747 189.137 19.9619C189.137 22.1871 188.858 23.9164 188.301 25.1499C187.744 26.3833 186.774 27 185.391 27C183.998 27 183.023 26.3833 182.466 25.1499C181.909 23.9164 181.631 22.1871 181.631 19.9619ZM187.794 19.9619C187.794 18.8556 187.734 17.921 187.615 17.158C187.505 16.3824 187.272 15.7593 186.913 15.2888C186.565 14.8183 186.058 14.5831 185.391 14.5831C184.715 14.5831 184.197 14.8183 183.839 15.2888C183.491 15.7593 183.257 16.3824 183.138 17.158C183.028 17.921 182.974 18.8556 182.974 19.9619C182.974 21.1063 183.028 22.0663 183.138 22.842C183.257 23.6176 183.491 24.2407 183.839 24.7112C184.197 25.1817 184.715 25.4169 185.391 25.4169C186.058 25.4169 186.565 25.1817 186.913 24.7112C187.272 24.2407 187.505 23.6176 187.615 22.842C187.734 22.0663 187.794 21.1063 187.794 19.9619Z" fill="#4f9cc8"/>
+							<path d="M192.494 19.9619C192.494 17.7747 192.772 16.0708 193.329 14.8501C193.886 13.6167 194.861 13 196.254 13C197.637 13 198.607 13.6167 199.164 14.8501C199.721 16.0708 200 17.7747 200 19.9619C200 22.1871 199.721 23.9164 199.164 25.1499C198.607 26.3833 197.637 27 196.254 27C194.861 27 193.886 26.3833 193.329 25.1499C192.772 23.9164 192.494 22.1871 192.494 19.9619ZM198.657 19.9619C198.657 18.8556 198.597 17.921 198.478 17.158C198.368 16.3824 198.135 15.7593 197.776 15.2888C197.428 14.8183 196.921 14.5831 196.254 14.5831C195.578 14.5831 195.06 14.8183 194.702 15.2888C194.354 15.7593 194.12 16.3824 194.001 17.158C193.891 17.921 193.837 18.8556 193.837 19.9619C193.837 21.1063 193.891 22.0663 194.001 22.842C194.12 23.6176 194.354 24.2407 194.702 24.7112C195.06 25.1817 195.578 25.4169 196.254 25.4169C196.921 25.4169 197.428 25.1817 197.776 24.7112C198.135 24.2407 198.368 23.6176 198.478 22.842C198.597 22.0663 198.657 21.1063 198.657 19.9619Z" fill="#4f9cc8"/>						
+							<defs>
+								<linearGradient id="bar4" x1="0%" y1="0%" x2="100%" y2="0%">
+									<stop offset="0%" style="stop-color:#E76F00;stop-opacity:1" />
+									<stop offset="0%" style="stop-color:#E76F00;stop-opacity:1" />
+									<stop offset="0%" style="stop-color:#89bdda;stop-opacity:1" />
+									<stop offset="100%" style="stop-color:#89bdda;stop-opacity:1" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</div><!-- .languages-bar -->
+					<div class="languages__percentage" id="languages__percentage" data-percentage='30'><span>%</span></div>
+				</div><!-- .languages-card -->
+
+				<div class="languages-card" data-rate=".5">
+					<div class="languages__title languages__title--5">SQL</div>
+					<div class="languages__bar languages__bar--5" data-percentage='25'>
+						<svg width="150" height="20" viewBox="0 0 201 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2.85745 0H198.293C201.055 3.952 201.268 6.05736 198.293 10H2.85745C-0.29026 6.36379 -0.427777 4.25317 2.85745 0Z" fill="#B0EDFB"/>
+							<path d="M2 19.9619C2 17.7747 2.334 16.0708 3.00199 14.8501C3.66998 13.6167 4.83897 13 6.50895 13C8.167 13 9.33002 13.6167 9.99801 14.8501C10.666 16.0708 11 17.7747 11 19.9619C11 22.1871 10.666 23.9164 9.99801 25.1499C9.33002 26.3833 8.167 27 6.50895 27C4.83897 27 3.66998 26.3833 3.00199 25.1499C2.334 23.9164 2 22.1871 2 19.9619ZM9.38966 19.9619C9.38966 18.8556 9.31809 17.921 9.17495 17.158C9.04374 16.3824 8.76342 15.7593 8.334 15.2888C7.9165 14.8183 7.30815 14.5831 6.50895 14.5831C5.69781 14.5831 5.07753 14.8183 4.64811 15.2888C4.23062 15.7593 3.9503 16.3824 3.80716 17.158C3.67594 17.921 3.61034 18.8556 3.61034 19.9619C3.61034 21.1063 3.67594 22.0663 3.80716 22.842C3.9503 23.6176 4.23062 24.2407 4.64811 24.7112C5.07753 25.1817 5.69781 25.4169 6.50895 25.4169C7.30815 25.4169 7.9165 25.1817 8.334 24.7112C8.76342 24.2407 9.04374 23.6176 9.17495 22.842C9.31809 22.0663 9.38966 21.1063 9.38966 19.9619Z" fill="#4f9cc8"/>
+							<path d="M175 14.7929V13.2098H177.806V27H176.433V14.7929H175Z" fill="#4f9cc8"/>
+							<path d="M181.631 19.9619C181.631 17.7747 181.909 16.0708 182.466 14.8501C183.023 13.6167 183.998 13 185.391 13C186.774 13 187.744 13.6167 188.301 14.8501C188.858 16.0708 189.137 17.7747 189.137 19.9619C189.137 22.1871 188.858 23.9164 188.301 25.1499C187.744 26.3833 186.774 27 185.391 27C183.998 27 183.023 26.3833 182.466 25.1499C181.909 23.9164 181.631 22.1871 181.631 19.9619ZM187.794 19.9619C187.794 18.8556 187.734 17.921 187.615 17.158C187.505 16.3824 187.272 15.7593 186.913 15.2888C186.565 14.8183 186.058 14.5831 185.391 14.5831C184.715 14.5831 184.197 14.8183 183.839 15.2888C183.491 15.7593 183.257 16.3824 183.138 17.158C183.028 17.921 182.974 18.8556 182.974 19.9619C182.974 21.1063 183.028 22.0663 183.138 22.842C183.257 23.6176 183.491 24.2407 183.839 24.7112C184.197 25.1817 184.715 25.4169 185.391 25.4169C186.058 25.4169 186.565 25.1817 186.913 24.7112C187.272 24.2407 187.505 23.6176 187.615 22.842C187.734 22.0663 187.794 21.1063 187.794 19.9619Z" fill="#4f9cc8"/>
+							<path d="M192.494 19.9619C192.494 17.7747 192.772 16.0708 193.329 14.8501C193.886 13.6167 194.861 13 196.254 13C197.637 13 198.607 13.6167 199.164 14.8501C199.721 16.0708 200 17.7747 200 19.9619C200 22.1871 199.721 23.9164 199.164 25.1499C198.607 26.3833 197.637 27 196.254 27C194.861 27 193.886 26.3833 193.329 25.1499C192.772 23.9164 192.494 22.1871 192.494 19.9619ZM198.657 19.9619C198.657 18.8556 198.597 17.921 198.478 17.158C198.368 16.3824 198.135 15.7593 197.776 15.2888C197.428 14.8183 196.921 14.5831 196.254 14.5831C195.578 14.5831 195.06 14.8183 194.702 15.2888C194.354 15.7593 194.12 16.3824 194.001 17.158C193.891 17.921 193.837 18.8556 193.837 19.9619C193.837 21.1063 193.891 22.0663 194.001 22.842C194.12 23.6176 194.354 24.2407 194.702 24.7112C195.06 25.1817 195.578 25.4169 196.254 25.4169C196.921 25.4169 197.428 25.1817 197.776 24.7112C198.135 24.2407 198.368 23.6176 198.478 22.842C198.597 22.0663 198.657 21.1063 198.657 19.9619Z" fill="#4f9cc8"/>
+							<defs>
+								<linearGradient id="bar5" x1="0%" y1="0%" x2="100%" y2="0%">
+									<stop offset="0%" style="stop-color:#5D4038;stop-opacity:1" />
+									<stop offset="0%" style="stop-color:#5D4038;stop-opacity:1" />
+									<stop offset="0%" style="stop-color:#89bdda;stop-opacity:1" />
+									<stop offset="100%" style="stop-color:#89bdda;stop-opacity:1" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</div><!-- .languages-bar -->
+					<div class="languages__percentage" id="languages__percentage" data-percentage='25'><span>%</span></div>
+				</div><!-- .languages-card -->
+
+				<div class="languages-card" data-rate=".5">
+					<div class="languages__title languages__title--6">Nodejs</div>
+					<div class="languages__bar languages__bar--6" data-percentage='35'>
+						<svg width="150" height="20" viewBox="0 0 201 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2.85745 0H198.293C201.055 3.952 201.268 6.05736 198.293 10H2.85745C-0.29026 6.36379 -0.427777 4.25317 2.85745 0Z" fill="#B0EDFB"/>
+							<path d="M2 19.9619C2 17.7747 2.334 16.0708 3.00199 14.8501C3.66998 13.6167 4.83897 13 6.50895 13C8.167 13 9.33002 13.6167 9.99801 14.8501C10.666 16.0708 11 17.7747 11 19.9619C11 22.1871 10.666 23.9164 9.99801 25.1499C9.33002 26.3833 8.167 27 6.50895 27C4.83897 27 3.66998 26.3833 3.00199 25.1499C2.334 23.9164 2 22.1871 2 19.9619ZM9.38966 19.9619C9.38966 18.8556 9.31809 17.921 9.17495 17.158C9.04374 16.3824 8.76342 15.7593 8.334 15.2888C7.9165 14.8183 7.30815 14.5831 6.50895 14.5831C5.69781 14.5831 5.07753 14.8183 4.64811 15.2888C4.23062 15.7593 3.9503 16.3824 3.80716 17.158C3.67594 17.921 3.61034 18.8556 3.61034 19.9619C3.61034 21.1063 3.67594 22.0663 3.80716 22.842C3.9503 23.6176 4.23062 24.2407 4.64811 24.7112C5.07753 25.1817 5.69781 25.4169 6.50895 25.4169C7.30815 25.4169 7.9165 25.1817 8.334 24.7112C8.76342 24.2407 9.04374 23.6176 9.17495 22.842C9.31809 22.0663 9.38966 21.1063 9.38966 19.9619Z" fill="#4f9cc8"/>
+							<path d="M175 14.7929V13.2098H177.806V27H176.433V14.7929H175Z" fill="#4f9cc8"/>
+							<path d="M181.631 19.9619C181.631 17.7747 181.909 16.0708 182.466 14.8501C183.023 13.6167 183.998 13 185.391 13C186.774 13 187.744 13.6167 188.301 14.8501C188.858 16.0708 189.137 17.7747 189.137 19.9619C189.137 22.1871 188.858 23.9164 188.301 25.1499C187.744 26.3833 186.774 27 185.391 27C183.998 27 183.023 26.3833 182.466 25.1499C181.909 23.9164 181.631 22.1871 181.631 19.9619ZM187.794 19.9619C187.794 18.8556 187.734 17.921 187.615 17.158C187.505 16.3824 187.272 15.7593 186.913 15.2888C186.565 14.8183 186.058 14.5831 185.391 14.5831C184.715 14.5831 184.197 14.8183 183.839 15.2888C183.491 15.7593 183.257 16.3824 183.138 17.158C183.028 17.921 182.974 18.8556 182.974 19.9619C182.974 21.1063 183.028 22.0663 183.138 22.842C183.257 23.6176 183.491 24.2407 183.839 24.7112C184.197 25.1817 184.715 25.4169 185.391 25.4169C186.058 25.4169 186.565 25.1817 186.913 24.7112C187.272 24.2407 187.505 23.6176 187.615 22.842C187.734 22.0663 187.794 21.1063 187.794 19.9619Z" fill="#4f9cc8"/>
+							<path d="M192.494 19.9619C192.494 17.7747 192.772 16.0708 193.329 14.8501C193.886 13.6167 194.861 13 196.254 13C197.637 13 198.607 13.6167 199.164 14.8501C199.721 16.0708 200 17.7747 200 19.9619C200 22.1871 199.721 23.9164 199.164 25.1499C198.607 26.3833 197.637 27 196.254 27C194.861 27 193.886 26.3833 193.329 25.1499C192.772 23.9164 192.494 22.1871 192.494 19.9619ZM198.657 19.9619C198.657 18.8556 198.597 17.921 198.478 17.158C198.368 16.3824 198.135 15.7593 197.776 15.2888C197.428 14.8183 196.921 14.5831 196.254 14.5831C195.578 14.5831 195.06 14.8183 194.702 15.2888C194.354 15.7593 194.12 16.3824 194.001 17.158C193.891 17.921 193.837 18.8556 193.837 19.9619C193.837 21.1063 193.891 22.0663 194.001 22.842C194.12 23.6176 194.354 24.2407 194.702 24.7112C195.06 25.1817 195.578 25.4169 196.254 25.4169C196.921 25.4169 197.428 25.1817 197.776 24.7112C198.135 24.2407 198.368 23.6176 198.478 22.842C198.597 22.0663 198.657 21.1063 198.657 19.9619Z" fill="#4f9cc8"/>
+							<defs>
+								<linearGradient id="bar6" x1="0%" y1="0%" x2="100%" y2="0%">
+									<stop offset="0%" style="stop-color:#4DAE4F;stop-opacity:1" />
+									<stop offset="0%" style="stop-color:#4DAE4F;stop-opacity:1" />
+									<stop offset="0%" style="stop-color:#89bdda;stop-opacity:1" />
+									<stop offset="100%" style="stop-color:#89bdda;stop-opacity:1" />
+								</linearGradient>
+							</defs>
+						</svg>
+					</div><!-- .languages-bar -->
+					<div class="languages__percentage" id="languages__percentage" data-percentage='35'><span>%</span></div>
+				</div><!-- .languages-card -->
+			</div><!-- .languages__wrapper -->
+		</section><!-- LANGUAGES Section -->
+
+
+		<!-- PROJECTS Section -->
+		<section class="projects" id="projects">
+			<h2 class="heading-2 projects__subtitle">Portfolio</h2>
+			<div class="sign">
+				<svg viewBox="0 0 204 24" id="sign-portfolio" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M93.2147 2C466.888 11.6555 -275.381 11.1057 123.629 22" stroke="#75AABA" stroke-width="2"/>
+				</svg>	
+			</div>
+			<div class="projects__wrapper">
+				<div class="projects__portfolio">
+					<div class="projects__image"></div>
+					<h3 class="projects__title heading-3 heading-3--maracana">
+						Maracana Canada
+					</h3>
+					<p class="projects__description translateText" data-key="maracana"></p>
+					<div class="projects__icons">
+						<a href="https://github.com/p77-web/Maracana-Canada" class="projects__link" target="_blank">
+							<svg class="projects__icon">
+								<use xlink:href="img/sprite.svg#icon-code"></use>
+							</svg>
+						</a>
+						<a href="http://maracanacanada.com" class="projects__link" target="_blank">
+							<svg class="projects__icon">
+								<use xlink:href="img/sprite.svg#icon-globe"></use>
+							</svg>
+						</a>
+					</div><!-- .projects__icons -->
+				</div><!-- .projects__portfolio -->
+				<div class="projects__portfolio">
+					<div class="projects__image"></div>
+					<h3 class="projects__title heading-3">
+						Maracana Canada
+					</h3>
+					<p class="projects__description">The official site of Maracana Canada Federation.
+					</p>
+					<div class="projects__icons">
+						<a href="https://github.com/p77-web/Maracana-Canada" class="projects__link" target="_blank">
+							<svg class="projects__icon">
+								<use xlink:href="img/sprite.svg#icon-code"></use>
+							</svg>
+						</a>
+						<a href="http://maracanacanada.com" class="projects__link" target="_blank">
+							<svg class="projects__icon">
+								<use xlink:href="img/sprite.svg#icon-globe"></use>
+							</svg>
+						</a>
+					</div><!-- .projects__icons -->
+				</div><!-- .projects__portfolio -->
+			</div><!-- .projects__wrapper -->
+		</section><!-- PROJECTS Section -->
+
+		<footer class="contact" id="contact">
+			<div class="contact__icons">
+				<a href="https://www.linkedin.com/in/paul-farcas-2b097b41/" class="contact__link" target="_blank">
+					<svg class="contact__icon">
+						<use xlink:href="img/sprite.svg#icon-linkedin-square"></use>
+					</svg>
+				</a>					
+				<a href="https://github.com/p77-web" class="contact__link" target="_blank">
+					<svg class="contact__icon">
+						<use xlink:href="img/sprite.svg#icon-github"></use>
+					</svg>
+				</a>				
+				<a href="mailto:paulfarcas13@gmail.com" class="contact__link" target="_blank">
+					<svg class="contact__icon">
+						<use xlink:href="img/sprite.svg#icon-envelope-o"></use>
+					</svg>
+				</a>					
+			</div><!-- .contact__icons -->
+			<div class="copyright">
+				<svg class="contact__icon contact__icon--copyright">
+					<use xlink:href="img/sprite.svg#icon-copyright"></use>
+				</svg>
+				<p class="copyright__text">
+					<span id="year"></span> Paul Farcas
+				</p>	
+			</div><!-- .copyright -->
+		</footer><!-- FOOTER -->
+
+		<!-- Scroll to top button -->
+		<div id="scroll-arrow">
+			<a href="" class="scroll-top" data-scroll="up">
+				<svg class="scroll__icon">
+					<use xlink:href="img/sprite.svg#icon-chevron-up"></use>
+				</svg>
+			</a>
+		</div><!-- .scroll-arrow -->
+
+		<!-- SCRIPTS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"	crossorigin="anonymous">
+		</script>
+		<script	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+			integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"	crossorigin="anonymous">
+		</script>
+
+		<script>
+			const letters = document.querySelectorAll('#circle-icon circle');
+			for (let index = 0; index < letters.length; index++) {
+				console.log(`Letter ${index} is ${letters[index].getTotalLength()}`);
+			}			
+		</script>
+
+		<script src="js/navigation.js"></script>
+		<script src="js/languages.js"></script>
+		<script src="js/year.js"></script>
+		<script src="js/scroll.js"></script>
+		<script src="js/words-carousel.js"></script>
+		<script src="js/sign.js"></script>
+	</body><!-- end body -->
+</html><!-- end html -->

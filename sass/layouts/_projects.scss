@@ -1,0 +1,250 @@
+/**
+* projects.scss
+*/
+
+/**
+* projects style
+*/
+.projects {
+	background-color: $primary-color-lighter;
+	grid-column: grid-start / grid-end;
+	position: relative;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(32rem, min-content));
+		row-gap: 7rem;
+		justify-content: center;
+		padding-bottom: 5rem;
+		position: relative;
+		margin: 0 auto;
+		width: 100%;
+
+		@include responsive(smaller-phone) {
+			grid-template-columns: repeat(auto-fit, minmax(45rem, min-content));
+		}
+
+		@include responsive(phone) {
+			grid-template-columns: repeat(auto-fit, minmax(50rem, min-content));
+		}
+
+		@include responsive(tab-port) {
+			grid-template-columns: repeat(auto-fit, minmax(70rem, min-content));
+			align-content: center;
+			column-gap: 5rem;
+		}
+	}
+
+	&__subtitle {
+		display: block;
+		color: $card-color;
+		text-align: center;
+		padding: 5rem 0 10rem;
+	}
+
+	&__portfolio {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 1rem;
+		padding: 0;
+		width: 100%;
+		justify-self: end;
+		align-self: center;
+		overflow: hidden;
+
+		@include responsive(tab-port) {
+			grid-template-columns: min-content 1fr;
+			grid-template-rows: 25% 50% 25%;
+		}
+	}
+
+	&__portfolio:hover &__description {
+		filter: blur(0px);
+		transition: all 0.3s ease 1.3s;
+	}
+
+	&__portfolio:hover &__image {
+		@include responsive(tab-port) {
+			transform: scale(1.05);
+		}
+	}
+
+	&__portfolio:hover &__image::before {
+		transform: translateX(30%) translateY(110%) rotate(-45deg);
+	}
+
+	&__portfolio:hover &__image::after {
+		transform: scale(1, 1);
+	}
+
+	&__portfolio:hover &__title {
+		transform: translateX(0);
+		opacity: 1;
+		transition: transform 0.5s, opacity 0.5s 0.2s;
+	}
+
+	&__portfolio:hover &__icons::before {
+		transform: translateY(0);
+		transition: transform 0.5s 1s;
+	}
+
+	&__portfolio:hover &__icon {
+		transform: translateX(0);
+		transition: transform 0.5s 1.2s;
+	}
+
+	&__image {
+		justify-self: center;
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url('../../img/maracana-project.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 25rem;
+		height: 25rem;
+		position: relative;
+		overflow: hidden;
+		z-index: 10;
+
+		transform: scale(1);
+		transition: transform 0.3s;
+
+		@include responsive(smaller-phone) {
+			width: 30rem;
+			height: 30rem;
+		}
+
+		@include responsive(phone) {
+			width: 35rem;
+			height: 35rem;
+		}
+
+		@include responsive(tab-port) {
+			grid-row: 1 / span 3;
+		}
+	}
+
+	&__image::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 200%;
+		height: 50%;
+		background-color: rgba($white-color, 0.3);
+
+		transform: translateX(-70%) translateY(-50%) rotate(-45deg);
+		transition: transform 1s 0.5s;
+	}
+
+	&__image::after {
+		content: '';
+		background-color: rgba(0, 0, 0, 0.3);
+		position: absolute;
+		top: 0rem;
+		left: 0rem;
+		bottom: 0rem;
+		right: 0rem;
+
+		transform: scale(0, 0);
+		transition: transform 0.5s 0.8s;
+	}
+
+	&__title {
+		text-align: center;
+		justify-self: center;
+		align-self: center;
+		opacity: 0;
+
+		transform: translateY(-125%);
+		transition: transform 0.5s 0.2s, opacity 0.5s;
+
+		@include responsive(tab-port) {
+			transform: translateX(-125%);
+			transition: transform 0.5s 0.2s, opacity 0.5s;
+		}
+	}
+
+	&__description {
+		font-size: 1.4rem;
+		font-weight: 600;
+		padding: 0 1rem;
+		color: $primary-color-darkest;
+		text-align: center;
+		filter: blur(2px);
+		justify-self: center;
+		align-self: start;
+
+		transition: all 0.3s ease 1.3s;
+
+		@include responsive(tab-port) {
+			padding: 0 2rem;
+		}
+	}
+
+	&__icons {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__icons::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		transform: translateX(-110%);
+		transition: transform 0.5s 0.3s;
+
+		@include responsive(tab-port) {
+			background-image: linear-gradient(to right, rgba($white-color, 0.2) 0%, rgba($white-color, 0.7) 50%, rgba($white-color, 0.2) 100%);
+		}
+	}
+
+	&__icon {
+		cursor: pointer;
+		fill: $primary-color-darker;
+		width: 2rem;
+		height: 2rem;
+		position: relative;
+		justify-self: center;
+		z-index: 10;
+		transform: translateY(8rem);
+		transition: transform 0.5s;
+
+		@include responsive(phone) {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+
+		@include responsive(tab-port) {
+			width: 3rem;
+			height: 3rem;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+	}
+}
+
+.sign {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 20rem;
+	height: 1rem;
+	padding: 10rem 0;
+	transform: translateX(-50%);
+	z-index: 100;
+}
+
+.sign path {
+	stroke-dasharray: 432px;
+	stroke-dashoffset: 432px;
+}

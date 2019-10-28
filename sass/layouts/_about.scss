@@ -1,0 +1,122 @@
+/**
+* about.scss
+*/
+
+/**
+* about style
+*/
+.about {
+	padding: 0 20%;
+	position: relative;
+	background-image: url('../../img/winter.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100%;
+
+	grid-column: grid-start / grid-end;
+
+	&__wrapper {
+		display: grid;
+		grid-gap: 7rem;
+		align-items: start;
+		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+		padding-bottom: 5rem;
+
+		@include responsive(phone) {
+			grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+		}
+
+		@include responsive(tab-port) {
+			grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+		}
+	}
+
+	&__subtitle {
+		display: block;
+		color: $card-color;
+		text-align: center;
+		padding: 5rem 0 10rem;
+		position: relative;
+		z-index: 10;
+	}
+
+	&-card {
+		display: grid;
+		row-gap: 1rem;
+		column-gap: 0.5rem;
+
+		&__title {
+			grid-row: 1 / 2;
+			grid-column: 1 / span 2;
+			justify-self: center;
+			color: $primary-color-darker;
+			z-index: 10;
+
+			@include responsive(phone) {
+				grid-column: 1 / span 1;
+			}
+		}
+
+		&__icon {
+			grid-row: 2 / 3;
+			grid-column: 1 / span 2;
+			justify-self: center;
+			fill: $primary-color-darker;
+			width: 4rem;
+			height: 4rem;
+			position: relative;
+			z-index: 10;
+			transform: translateY(-0.5rem);
+
+			@include responsive(phone) {
+				grid-row: 1 / 2;
+				grid-column: 2 / span 1;
+			}
+		}
+
+		&__text {
+			grid-column: 1 / span 2;
+			font-size: 1.6rem;
+			color: $card-color-darker;
+			text-align: justify;
+			position: relative;
+			z-index: 10;
+		}
+
+		@include responsive(phone) {
+			row-gap: 2rem;
+			column-gap: 1.5rem;
+		}
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: #fff;
+
+		opacity: 0.7;
+		z-index: 0;
+	}
+}
+
+.sign {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 20rem;
+	height: 1rem;
+	padding: 10rem 0;
+	transform: translateX(-50%);
+	z-index: 100;
+}
+
+.sign path {
+	stroke-dasharray: 432px;
+	stroke-dashoffset: 432px;
+}

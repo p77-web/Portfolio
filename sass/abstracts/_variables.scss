@@ -1,0 +1,29 @@
+/**
+* variables.scss
+*/
+
+// Colors
+$white-color: #ffffff;
+$black-color: #000000;
+
+$primary-color: #89bdda;
+$primary-color-darker: darken(#89bdda, 15%);
+$primary-color-darkest: darken(#89bdda, 30%);
+$primary-color-lighter: #89bdda33;
+
+$card-color: #ff5800;
+$card-color-lighter: lighten(#ff5800, 15%);
+$card-color-darker: darken(#ff5800, 5%);
+$card-color-darkest: darken(#ff5800, 15%);
+// $card-color: #d88d42;
+
+$js-color: #3d4db7;
+$html-color: #e34c26;
+$css-color: #0a71b9;
+$java-color: #e76f00;
+$db-color: #5d4038;
+$node-color: #4dae4f;
+
+$maracana-color: rgb(230, 55, 55);
+
+$footer-bg-color: #202020;

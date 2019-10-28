@@ -1,0 +1,154 @@
+/**
+* button.scss
+*/
+
+/**
+* button style 
+*/
+.btn {
+	&,
+	&:link,
+	&:visited {
+		grid-row-start: 5;
+		grid-column: 1 / -1;
+		justify-self: center;
+		align-self: end;
+
+		display: inline-block;
+		padding: 1rem 2rem;
+		cursor: pointer;
+		position: relative;
+
+		text-transform: uppercase;
+		overflow: hidden;
+		background-color: transparent;
+		border: none;
+		border-radius: 1rem;
+
+		transition: all 0.3s;
+
+		@include responsive(phone) {
+			grid-row-start: 6;
+			padding: 1rem 2.5rem;
+		}
+
+		@include responsive(tab-port) {
+			grid-row-start: 6;
+			grid-column: 2 / span 3;
+			justify-self: start;
+			padding: 1rem 3rem;
+		}
+
+		@include responsive(tab-land) {
+			grid-row-start: 6;
+			grid-column: 2 / span 2;
+			justify-self: center;
+			padding: 1rem 3rem;
+		}
+	}
+
+	// to change the button's spans
+	& > * {
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		transition: all 0.3s;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	// &:hover {
+	// 	// background-image: linear-gradient(to right top, #89bdda, #89bdda66);
+	// 	// box-shadow: 3px 4px 2px rgba($primary-color, 0.3);
+	// 	// transform: translateY(-1px);
+	// }
+
+	// &:active {
+	// 	// box-shadow: 1px 2px 1px rgba($primary-color, 0.3);
+	// 	// transform: translateY(3px);
+	// }
+
+	&__resume {
+		font-size: 1.5rem;
+		font-weight: 600;
+		border: 2px solid $primary-color;
+		// background-image: linear-gradient(to left bottom, #89bdda, #89bdda66);
+		color: $primary-color;
+		max-height: 100%;
+
+		@include responsive(phone) {
+			// max-height: 75%;
+		}
+
+		@include responsive(tab-port) {
+			// max-height: 50%;
+		}
+	}
+
+	// &::before {
+	// 	content: '';
+	// 	display: inline-block;
+	// 	width: 120%;
+	// 	height: 10%;
+	// 	background: linear-gradient(to bottom, rgba($primary-color, 0.1), rgba($primary-color, 0.9));
+	// 	background: rgba($primary-color, 0.9);
+	// 	position: absolute;
+	// 	top: -25%;
+	// 	right: -10%;
+	// 	z-index: 10;
+	// 	transition: all 0.4s;
+	// }
+
+	// &:hover::before {
+	// 	height: 100%;
+	// 	// transform: scale(2.5);
+	// }
+
+	// &::after {
+	// 	content: '';
+	// 	display: inline-block;
+	// 	width: 2px;
+	// 	height: 0%;
+	// 	background: linear-gradient(to bottom, rgba($primary-color, 0.1), rgba($primary-color, 0.9));
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	z-index: 0;
+	// 	transition: all 0.4s;
+	// }
+
+	// &:hover::after {
+	// 	height: 100%;
+	// 	// transform: scale(2.5);
+	// }
+
+	&__inactive {
+		text-decoration: none;
+		position: absolute;
+		left: 0%;
+		top: 0%;
+		opacity: 0;
+		transform: translateY(-50%);
+	}
+
+	&:hover &__active {
+		opacity: 0.5;
+		transform: translateY(200%);
+	}
+
+	&:hover &__inactive {
+		opacity: 1;
+		color: $primary-color;
+		transform: translateY(25%);
+	}
+
+	&__icon {
+		fill: $primary-color-darker;
+		width: 2rem;
+		height: 2rem;
+		position: relative;
+		// justify-self: center;
+	}
+}

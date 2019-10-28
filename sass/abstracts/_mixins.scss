@@ -1,0 +1,114 @@
+/**
+* mixins.scss
+*/
+
+/*
+  0 - 500px         CSS small phones
+500 - 600px         Smaller Phone
+600 - 900px         Phone
+900 - 1200px        Tablet portrait
+1200 - 1500px       Tablet landscape
+1500 - 1800px       Small desktop
+1800 - ....px       Big desktop
+
+*/
+
+// @mixin responsive-phone {
+// 	@media (max-width: 600px) {
+// 		@content;
+// 	}
+// }
+
+/*
+$breakpoint argument choises
+- phone         600px 
+- tab-port      900px
+- tab-land      1200px
+- big-desktop   1800px
+
+In media query em or rem are not affected by a root setting, like font-size in html above. 
+They will take the browser setting, meaning 16px. Em is a better choise for media query.
+1em = 16px
+
+
+// Media Queries for Mobile first approach
+
+!!! When are used in Desktop First Approach the order is from the smallest to the biggest breakpoint
+    1) phone - min-width: 37.5em
+    2) tab-port - min-width: 56.25em
+    3) tab-land - min-width: 75em
+    3) big-desktop - min-width: 112.5em
+        
+*/
+
+@mixin responsive($breakpoint) {
+	@if $breakpoint == smaller-phone {
+		@media only screen and (min-width: 31.25em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == phone {
+		@media only screen and (min-width: 37.5em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tab-port {
+		@media only screen and (min-width: 56.25em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tab-land {
+		@media only screen and (min-width: 75em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == small-desktop {
+		@media only screen and (min-width: 93.75em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == big-desktop {
+		@media only screen and (min-width: 112.5em) {
+			@content;
+		}
+	}
+}
+
+/* Media Queries for Desktop first approach
+
+!!! When are used in Desktop First Approach the order is from the biggest to the smallest breakpoint
+    1) tab-land - max-width: 75em
+    2) tab-port - max-width: 56.25em
+    3) phone - max-width: 37.5em
+*/
+
+// @mixin responsive($breakpoint) {
+// 	@if $breakpoint == phone {
+// 		@media only screen and (max-width: 37.5em) {
+// 			@content;
+// 		}
+// 	}
+
+// 	@if $breakpoint == tab-port {
+// 		@media only screen and (max-width: 56.25em) {
+// 			@content;
+// 		}
+// 	}
+
+// 	@if $breakpoint == tab-land {
+// 		@media only screen and (max-width: 75em) {
+// 			@content;
+// 		}
+// 	}
+
+// 	@if $breakpoint == big-desktop {
+// 		@media only screen and (min-width: 112.5em) {
+// 			@content;
+// 		}
+// 	}
+// }

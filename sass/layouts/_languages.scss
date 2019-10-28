@@ -1,0 +1,172 @@
+/**
+* languages.scss
+*/
+
+/**
+* languages style
+*/
+
+.languages {
+	grid-column: grid-start / grid-end;
+	position: relative;
+
+	@include responsive(tab-port) {
+		grid-column: content-start / content-end;
+	}
+
+	%text {
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	&__subtitle {
+		display: block;
+		color: $primary-color-darker;
+		text-align: center;
+		padding: 5rem 0 10rem;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+		grid-row-gap: 5rem;
+		grid-column-gap: 1.5rem;
+		justify-items: center;
+		padding-bottom: 5rem;
+	}
+
+	&-card {
+		cursor: pointer;
+		height: 15rem;
+		width: 15rem;
+		border-radius: 50%;
+		background-color: $primary-color-lighter;
+		box-shadow: 0 1rem 2.5rem -0.5rem $primary-color;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@include responsive(phone) {
+			height: 17.5rem;
+			width: 17.5rem;
+		}
+
+		@include responsive(tab-port) {
+			width: 20rem;
+			height: 20rem;
+		}
+	}
+
+	&__title {
+		padding-bottom: 1rem;
+		font-size: 2.5rem;
+		font-weight: 900;
+
+		@include responsive(phone) {
+			font-size: 3.5rem;
+		}
+
+		@include responsive(tab-port) {
+			font-size: 4rem;
+		}
+
+		&--1 {
+			background: linear-gradient(to top, $js-color 0%, $js-color 30%, $white-color 100%);
+			@extend %text;
+		}
+
+		&--2 {
+			background: linear-gradient(to top, $html-color 0%, $html-color 30%, $white-color 100%);
+			@extend %text;
+		}
+
+		&--3 {
+			background: linear-gradient(to top, $css-color 0%, $css-color 30%, $white-color 100%);
+			@extend %text;
+		}
+
+		&--4 {
+			background: linear-gradient(to top, $java-color 0%, $java-color 30%, $white-color 100%);
+			@extend %text;
+		}
+
+		&--5 {
+			background: linear-gradient(to top, $db-color 0%, $db-color 30%, $white-color 100%);
+			@extend %text;
+		}
+
+		&--6 {
+			background: linear-gradient(to top, $node-color 0%, $node-color 30%, $white-color 100%);
+			@extend %text;
+		}
+	}
+
+	&__percentage {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: $primary-color-darker;
+
+		@include responsive(phone) {
+			font-size: 2.75rem;
+		}
+
+		@include responsive(tab-port) {
+			font-size: 3rem;
+		}
+	}
+
+	&__bar svg {
+		width: 12rem;
+
+		@include responsive(phone) {
+			width: 13rem;
+		}
+
+		@include responsive(tab-port) {
+			width: 14rem;
+		}
+	}
+
+	&__bar--1 path:nth-child(1) {
+		fill: url(#bar1);
+	}
+
+	&__bar--2 path:nth-child(1) {
+		fill: url(#bar2);
+	}
+
+	&__bar--3 path:nth-child(1) {
+		fill: url(#bar3);
+	}
+
+	&__bar--4 path:nth-child(1) {
+		fill: url(#bar4);
+	}
+
+	&__bar--5 path:nth-child(1) {
+		fill: url(#bar5);
+	}
+
+	&__bar--6 path:nth-child(1) {
+		fill: url(#bar6);
+	}
+}
+
+.sign {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 20rem;
+	height: 2rem;
+	padding: 10rem 0;
+	transform: translateX(-50%);
+	z-index: 100;
+}
+
+.sign path {
+	stroke-dasharray: 432px;
+	stroke-dashoffset: 432px;
+}
