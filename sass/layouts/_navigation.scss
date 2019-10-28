@@ -238,7 +238,6 @@ li:nth-child(5) {
 	right: 1.5rem;
 	width: 25px;
 	z-index: 200;
-	// overflow: hidden;
 
 	@include responsive(tab-port) {
 		display: none;
@@ -249,5 +248,4 @@ li:nth-child(5) {
 	stroke-dasharray: 63px;
 	stroke-dashoffset: 63px;
 	animation: menu-animation-blue 1s ease-in forwards;
-	// pointer-events: none;
 }
