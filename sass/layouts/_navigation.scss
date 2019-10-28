@@ -20,25 +20,6 @@
 }
 
 /**
-* menu-toggle style
-*/
-.menu-toggle {
-	position: absolute;
-	top: 1.5rem;
-	right: 1.5rem;
-	// color: $primary-color-darker;
-	cursor: pointer;
-	z-index: 1000;
-	// display: block;
-	height: 25px;
-	width: 25px;
-
-	@include responsive(tab-port) {
-		display: none;
-	}
-}
-
-/**
 * navigation style
 */
 .navigation {
@@ -227,17 +208,46 @@ li:nth-child(5) {
 	animation: logo 2s linear;
 }
 
-.menu-btn {
+/**
+* menu-toggle style
+*/
+.menu-container {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
 	cursor: pointer;
 	display: block;
+	height: 25px;
+	width: 25px;
+	z-index: 100;
+
+	& input {
+		cursor: pointer;
+		opacity: 0;
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	& input:checked {
+		height: 40px;
+		width: 40px;
+	}
+
+	@include responsive(tab-port) {
+		display: none;
+	}
 }
 
 #hamburger {
 	position: absolute;
-	top: 1.5rem;
-	right: 1.5rem;
+	top: 0;
+	left: 0;
 	width: 25px;
-	z-index: 200;
+	z-index: -1;
 
 	@include responsive(tab-port) {
 		display: none;
