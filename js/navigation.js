@@ -1,16 +1,13 @@
 const hamburger = document.querySelector('#hamburger');
 const menu_input = document.querySelector('.menu-container input');
 
-// const menu = document.getElementById('circle-icon');
 var isClicked = true;
 
 window.addEventListener('load', () => {
 	hamburger.firstElementChild.setAttribute('style', 'animation: menu-animation-blue 1s ease-in forwards;');
 });
 
-menu_input.addEventListener('click', e => {
-	alert(menu_input.checked);
-
+menu_input.addEventListener('click', () => {
 	const overlay = document.querySelector('.overlay');
 	const nav = document.querySelector('.navigation');
 
@@ -29,7 +26,6 @@ menu_input.addEventListener('click', e => {
 		hamburger.firstElementChild.setAttribute('style', 'animation: menu-animation-blue 1s ease-in forwards;');
 		isClicked = true;
 	}
-	// e.preventDefault();
 });
 
 hamburger.addEventListener('click', e => {
