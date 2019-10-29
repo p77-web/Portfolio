@@ -30,6 +30,7 @@ menu_input.addEventListener('click', e => {
 		hamburger.firstElementChild.setAttribute('style', 'animation: menu-animation-blue 1s ease-in forwards;');
 		isClicked = true;
 	}
+	e.preventDefault();
 });
 
 hamburger.addEventListener('click', e => {

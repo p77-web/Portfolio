@@ -253,4 +253,5 @@ li:nth-child(5) {
 #hamburger circle {
 	stroke-dasharray: 5px;
 	stroke-dashoffset: 15px;
+	animation: menu-animation-blue 1s ease-in forwards;
 }
