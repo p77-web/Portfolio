@@ -9,11 +9,10 @@ window.addEventListener('load', () => {
 });
 
 menu_input.addEventListener('click', e => {
-	// console.log(menu_input.checked);
+	alert(menu_input.checked);
 
 	const overlay = document.querySelector('.overlay');
 	const nav = document.querySelector('.navigation');
-	// const icon = document.querySelector('.menu-toggle span');
 
 	if (menu_input.checked) {
 		overlay.classList.toggle('menu-open');
