@@ -94,7 +94,7 @@ function getButtonLanguage() {
 
 // print the text by browser language
 window.addEventListener(
-	'load',
+	'DOMContentLoaded',
 	function() {
 		// get the classes that contain the text to change
 		let textToChange = document.querySelectorAll('.translateText');
