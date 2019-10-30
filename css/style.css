@@ -1341,7 +1341,7 @@ li:nth-child(5) {
     display: flex;
     width: 50%;
     height: 4rem;
-    margin: 0rem auto; }
+    margin: 0 auto; }
     @media only screen and (min-width: 37.5em) {
       .contact__icons {
         width: 40%; } }
@@ -1367,7 +1367,7 @@ li:nth-child(5) {
     fill: #89bdda;
     width: 2rem;
     height: 2rem;
-    margin: .5rem 5rem; }
+    margin: 2rem 5rem 0rem; }
     @media only screen and (min-width: 56.25em) {
       .contact__icon {
         width: 2.5rem;
