@@ -609,11 +609,17 @@ body {
   background-color: rgba(0, 0, 0, 0); }
   .overlay.menu-open {
     background-color: rgba(0, 0, 0, 0.9);
-    position: relative;
-    grid-row: 1 / -1;
-    grid-column: 1 / -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     z-index: 10;
     transition: background-color 0.7s; }
+  @supports (grid-row: 1/-1) and (grid-column: 1/-1) {
+    .overlay.menu-open {
+      grid-row: 1 / -1;
+      grid-column: 1 / -1; } }
 
 /**
 * navigation style
@@ -632,11 +638,11 @@ body {
     color: #89bdda;
     text-decoration: none; }
   .navigation.menu-open {
-    display: grid;
-    grid-row: 1 / -1;
-    grid-column: 1 / -1;
     position: relative;
-    z-index: 10; }
+    z-index: 10;
+    display: flex;
+    grid-column: 1 / -1;
+    justify-content: center; }
 
 /**
 * nav style

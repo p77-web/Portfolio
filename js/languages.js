@@ -35,7 +35,7 @@
 
 window.addEventListener('scroll', function(e) {
 	changePosition();
-	changeValue();
+	// changeValue();
 	// changeTitleValue();
 	changeBarValue();
 });
