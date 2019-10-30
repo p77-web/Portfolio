@@ -1,9 +1,9 @@
-window.addEventListener('scroll', e => {
+window.addEventListener('scroll', function(e) {
 	e.preventDefault();
 	changeSign();
 });
 
-const changeSign = e => {
+const changeSign = function() {
 	const signAbout = document.getElementById('sign-about');
 	const signLanguages = document.getElementById('sign-languages');
 	const signPortfolio = document.getElementById('sign-portfolio');

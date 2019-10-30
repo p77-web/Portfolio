@@ -10,7 +10,7 @@
 
 // 		var html = document.documentElement;
 
-// 		const changeBarValue = e => {
+// 		const changeBarValue = function(e) {
 // 			for (const stop of stopArr) {
 // 				if (stopArr.length) {
 // 					// if (html.scrollHeight - html.clientHeight === 0) {
@@ -33,17 +33,17 @@
 // 	false
 // );
 
-window.addEventListener('scroll', e => {
+window.addEventListener('scroll', function(e) {
 	changePosition();
 	changeValue();
 	// changeTitleValue();
 	changeBarValue();
 });
 
-const changePosition = e => {
+const changePosition = function(e) {
 	const cards = document.querySelectorAll('.languages-card');
 
-	cards.forEach(card => {
+	cards.forEach(function(card) {
 		let card_pos = window.pageYOffset * card.dataset.rate;
 		let initial_card_pos = card_pos - 500;
 
@@ -62,12 +62,12 @@ let limit = 0;
 let titleLimit = 0;
 let barLimit = 0;
 
-const changeValue = e => {
+const changeValue = function(e) {
 	let percentages = document.querySelectorAll('.languages__percentage');
 	let position = document.getElementById('languages');
 
 	if (position.getBoundingClientRect().top < 300 && limit === 0) {
-		percentages.forEach(percentage => {
+		percentages.forEach(function(percentage) {
 			let counter = 0;
 
 			setInterval(function() {
@@ -80,19 +80,19 @@ const changeValue = e => {
 		limit = 1;
 	}
 	if (position.getBoundingClientRect().top > 1000) {
-		percentages.forEach(percentage => {
+		percentages.forEach(function(percentage) {
 			percentage.innerHTML = 0 + '%';
 			limit = 0;
 		});
 	}
 };
 
-const changeBarValue = e => {
+const changeBarValue = function(e) {
 	let percentages = document.querySelectorAll('.languages__bar');
 	let position = document.getElementById('languages');
 
 	if (position.getBoundingClientRect().top < 300 && barLimit === 0) {
-		percentages.forEach(percentage => {
+		percentages.forEach(function(percentage) {
 			let counter = 0;
 			setInterval(function() {
 				if (counter < parseInt(percentage.dataset.percentage, 10)) {
@@ -105,7 +105,7 @@ const changeBarValue = e => {
 	}
 
 	if (position.getBoundingClientRect().top > 1000) {
-		percentages.forEach(percentage => {
+		percentages.forEach(function(percentage) {
 			percentage.getElementsByTagName('stop')[1].setAttribute('offset', 0 + '%');
 			barLimit = 0;
 		});

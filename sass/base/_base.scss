@@ -31,13 +31,21 @@ body {
 }
 
 .wrapper {
-	display: grid;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
 
-	// setting the rows' number
-	grid-template-rows: 100vh;
+@supports (grid-column: grid) {
+	.wrapper {
+		display: grid;
 
-	// setting the columns' number
-	grid-template-columns: [grid-start] minmax(5rem, 1fr) [content-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [content-end] minmax(5rem, 1fr) [grid-end];
+		// setting the rows' number
+		grid-template-rows: 100vh;
+
+		// setting the columns' number
+		grid-template-columns: [grid-start] minmax(5rem, 1fr) [content-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [content-end] minmax(5rem, 1fr) [grid-end];
+	}
 }
 
 ::selection {

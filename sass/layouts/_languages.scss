@@ -7,8 +7,13 @@
 */
 
 .languages {
-	grid-column: grid-start / grid-end;
 	position: relative;
+	width: 100%;
+	@supports (grid-column: 1 / 2) {
+		& {
+			grid-column: grid-start / grid-end;
+		}
+	}
 
 	@include responsive(tab-port) {
 		grid-column: content-start / content-end;
@@ -28,18 +33,29 @@
 	}
 
 	&__wrapper {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-		grid-row-gap: 5rem;
-		grid-column-gap: 1.5rem;
-		justify-items: center;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
 		padding-bottom: 5rem;
+	}
+
+	@supports (display: grid) {
+		&__wrapper {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+			grid-row-gap: 5rem;
+			grid-column-gap: 1.5rem;
+			justify-items: center;
+		}
 	}
 
 	&-card {
 		cursor: pointer;
 		height: 15rem;
 		width: 15rem;
+		margin: 3rem 8rem;
 		border-radius: 50%;
 		background-color: $primary-color-lighter;
 		box-shadow: 0 1rem 2.5rem -0.5rem $primary-color;
@@ -52,11 +68,19 @@
 		@include responsive(phone) {
 			height: 17.5rem;
 			width: 17.5rem;
+			margin: 3rem 15rem;
 		}
 
 		@include responsive(tab-port) {
 			width: 20rem;
 			height: 20rem;
+			margin: 3rem 14rem;
+		}
+
+		@include responsive(tab-land) {
+			width: 20rem;
+			height: 20rem;
+			margin: 3rem 15rem;
 		}
 	}
 
@@ -74,33 +98,61 @@
 		}
 
 		&--1 {
-			background: linear-gradient(to top, $js-color 0%, $js-color 30%, $white-color 100%);
-			@extend %text;
+			color: $js-color;	
 		}
 
 		&--2 {
-			background: linear-gradient(to top, $html-color 0%, $html-color 30%, $white-color 100%);
-			@extend %text;
+			color: $html-color;
 		}
 
 		&--3 {
-			background: linear-gradient(to top, $css-color 0%, $css-color 30%, $white-color 100%);
-			@extend %text;
+			color: $css-color;
+	
 		}
 
 		&--4 {
-			background: linear-gradient(to top, $java-color 0%, $java-color 30%, $white-color 100%);
-			@extend %text;
+			color: $java-color;
+
 		}
 
 		&--5 {
-			background: linear-gradient(to top, $db-color 0%, $db-color 30%, $white-color 100%);
-			@extend %text;
+			color: $db-color;
+		
 		}
 
 		&--6 {
-			background: linear-gradient(to top, $node-color 0%, $node-color 30%, $white-color 100%);
-			@extend %text;
+			color: $node-color;
+		}
+
+		@supports (-webkit-text-fill-color: transparent) {
+			&--1 {
+				background: linear-gradient(to top, $js-color 0%, $js-color 30%, $white-color 100%);
+				@extend %text;
+			}
+			&--2 {
+				background: linear-gradient(to top, $html-color 0%, $html-color 30%, $white-color 100%);
+				@extend %text;
+			}
+
+			&--3 {
+				background: linear-gradient(to top, $css-color 0%, $css-color 30%, $white-color 100%);
+				@extend %text;
+			}
+
+			&--4 {
+				background: linear-gradient(to top, $java-color 0%, $java-color 30%, $white-color 100%);
+				@extend %text;
+			}
+
+			&--5 {
+				background: linear-gradient(to top, $db-color 0%, $db-color 30%, $white-color 100%);
+				@extend %text;
+			}
+
+			&--6 {
+				background: linear-gradient(to top, $node-color 0%, $node-color 30%, $white-color 100%);
+				@extend %text;
+			}
 		}
 	}
 

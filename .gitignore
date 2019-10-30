@@ -6,6 +6,7 @@ sass/abstracts/_functions.scss
 sass/base/_utilities.scss
 sass/components/_curlyBrackets.scss
 sass/layouts/_test.scss
+sass/layouts/_grid.scss
 sass/pages
 index1.html
 infos.txt

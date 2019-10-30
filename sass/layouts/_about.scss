@@ -5,7 +5,14 @@
 /**
 * about style
 */
+
 .about {
+	@supports (grid-column: 1 / 2) {
+		& {
+			grid-column: grid-start / grid-end;
+		}
+	}
+
 	padding: 0 20%;
 	position: relative;
 	background-image: url('../../img/winter.jpg');
@@ -15,20 +22,27 @@
 	background-repeat: no-repeat;
 	height: 100%;
 
-	grid-column: grid-start / grid-end;
-
-	&__wrapper {
-		display: grid;
-		grid-gap: 7rem;
-		align-items: start;
-		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+	&__wrapper {	
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		padding-bottom: 5rem;
 
-		@include responsive(phone) {
+		@supports (grid-column: grid) {
+			& {
+				display: grid;
+				grid-gap: 7rem;
+				align-items: start;
+				grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+			}
+		}
+
+		@include responsive(phone) {		
 			grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
 		}
 
 		@include responsive(tab-port) {
+			flex-wrap: nowrap;
 			grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
 		}
 	}
@@ -42,32 +56,67 @@
 		z-index: 10;
 	}
 
-	&-card {
-		display: grid;
-		row-gap: 1rem;
-		column-gap: 0.5rem;
+	&-card {		
+		@supports (grid-column: grid) {
+			& {
+				display: grid;
+				row-gap: 1rem;
+				column-gap: 0.5rem;
+			}
+		}
+
+		margin: 3rem 2rem;
+
+		@include responsive(tab-port) {
+			margin: 0rem 3rem;
+		}
+
+		@include responsive(tab-land) {
+			flex-basis: 0;
+			flex-grow: 1;
+		}
+
+		@supports (grid-column: grid) {
+			&__title {
+				grid-row: 1 / 2;
+				grid-column: 1 / span 2;
+				justify-self: center;
+			}
+		}
 
 		&__title {
-			grid-row: 1 / 2;
-			grid-column: 1 / span 2;
-			justify-self: center;
+			-ms-grid-row-align: center;
 			color: $primary-color-darker;
+			position: relative;
 			z-index: 10;
+			float: left;
 
 			@include responsive(phone) {
 				grid-column: 1 / span 1;
 			}
 		}
 
+		@supports (grid-column: grid) {
+			&__icon {
+				grid-row: 2 / 3;
+				grid-column: 1 / span 2;
+				justify-self: center;
+				
+				@include responsive(phone) {
+					grid-row: 1 / 2;
+					grid-column: 2 / span 1;
+				}
+			}
+		}
+
 		&__icon {
-			grid-row: 2 / 3;
-			grid-column: 1 / span 2;
-			justify-self: center;
 			fill: $primary-color-darker;
 			width: 4rem;
 			height: 4rem;
 			position: relative;
 			z-index: 10;
+			float: right;
+			
 			transform: translateY(-0.5rem);
 
 			@include responsive(phone) {
@@ -76,11 +125,19 @@
 			}
 		}
 
+		@supports (grid-column: grid) {
+			&__text {
+				grid-column: 1 / span 2;
+			}
+
+		}
 		&__text {
-			grid-column: 1 / span 2;
+			float: left;
+			margin-top: 2rem;
 			font-size: 1.6rem;
 			color: $card-color-darker;
 			text-align: justify;
+			text-indent: 1rem;
 			position: relative;
 			z-index: 10;
 		}
@@ -88,6 +145,10 @@
 		@include responsive(phone) {
 			row-gap: 2rem;
 			column-gap: 1.5rem;
+		}
+
+		@include responsive(tab-port) {
+			text-indent: 2rem;
 		}
 	}
 
