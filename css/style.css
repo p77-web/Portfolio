@@ -950,7 +950,6 @@ li:nth-child(5) {
       grid-column: content-start / content-end; } }
   .languages .languages__title--1, .languages .languages__title--2, .languages .languages__title--3, .languages .languages__title--4, .languages .languages__title--5, .languages .languages__title--6 {
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent; }
   .languages__subtitle {
     display: block;
