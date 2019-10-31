@@ -113,11 +113,6 @@ They will take the browser setting, meaning 16px. Em is a better choise for medi
     stroke-dashoffset: 0;
     stroke: #4f9cc8; } }
 
-@-webkit-keyframes menu-animation-red {
-  to {
-    stroke-dashoffset: 0;
-    stroke: #ff5800; } }
-
 @keyframes menu-animation-red {
   0% {
     stroke-dashoffset: 0;
@@ -128,17 +123,6 @@ They will take the browser setting, meaning 16px. Em is a better choise for medi
   100% {
     stroke-dashoffset: 0;
     stroke: #ff5800; } }
-
-@-webkit-keyframes menu-animation-blue {
-  0% {
-    stroke-dashoffset: 0;
-    stroke: #4f9cc8; }
-  50% {
-    stroke-dashoffset: -63;
-    stroke: #4f9cc8; }
-  100% {
-    stroke-dashoffset: 0;
-    stroke: #4f9cc8; } }
 
 @keyframes menu-animation-blue {
   0% {

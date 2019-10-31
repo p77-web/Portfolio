@@ -61,6 +61,10 @@ var language = {
 	}
 };
 
+window.addEventListener('unload', function(){
+  localStorage.removeItem('portfolio__language');
+});
+
 function getBrowserLanguage() {
 	let browserFullLanguage = window.navigator.userLanguage || window.navigator.language;
 
@@ -94,7 +98,7 @@ function getButtonLanguage() {
 
 // print the text by browser language
 window.addEventListener(
-	'DOMContentLoaded',
+	'load',
 	function() {
 		// get the classes that contain the text to change
 		let textToChange = document.querySelectorAll('.translateText');
