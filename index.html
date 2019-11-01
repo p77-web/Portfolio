@@ -16,6 +16,19 @@
 		<title>Portfolio - Paul Farcas</title>
 	</head>
 	<body class="wrapper" data-spy="spy" data-target="#main-nav" id="home">
+
+		<div class="load-overlay">
+			<!-- <svg width="80" height="80" viewBox="0 0 100 100" id='overlay-circle' fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="50" cy="50" r="48.5" stroke="#89bdda" stroke-width="3"></circle>
+			</svg>	 -->
+			<svg viewBox="0 0 100 100" id='overlay-circle' fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle r="48.5" transform="matrix(-1 0 0 1 50 50)" stroke="#89bdda" stroke-width="5"/>
+			</svg>
+				
+			<div class="counter">
+				<div class="counter__percentage" id="counter__percentage" data-percentage='100'><span>%</span></div>
+			</div>
+		</div>
 		
 		<!-- HEADER -->
 		<header class="header">
@@ -323,6 +336,11 @@
 		<script	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 			integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"	crossorigin="anonymous">
 		</script>
+		<!-- <script>
+			const letters = document.querySelector('#overlay-circle circle');
+			console.log(letters.getTotalLength());
+		</script> -->
+		<script src="js/load-counter.js"></script>
 		<script src="js/navigation.js"></script>
 		<script src="js/languages.js"></script>
 		<script src="js/year.js"></script>

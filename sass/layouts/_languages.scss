@@ -97,7 +97,7 @@
 		}
 
 		&--1 {
-			color: $js-color;	
+			color: $js-color;
 		}
 
 		&--2 {
@@ -106,17 +106,14 @@
 
 		&--3 {
 			color: $css-color;
-	
 		}
 
 		&--4 {
 			color: $java-color;
-
 		}
 
 		&--5 {
 			color: $db-color;
-		
 		}
 
 		&--6 {
@@ -152,20 +149,6 @@
 				background: linear-gradient(to top, $node-color 0%, $node-color 30%, $white-color 100%);
 				@extend %text;
 			}
-		}
-	}
-
-	&__percentage {
-		font-size: 2.5rem;
-		font-weight: 700;
-		color: $primary-color-darker;
-
-		@include responsive(phone) {
-			font-size: 2.75rem;
-		}
-
-		@include responsive(tab-port) {
-			font-size: 3rem;
 		}
 	}
 

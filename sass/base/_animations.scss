@@ -141,3 +141,10 @@
 		stroke: #4f9cc8;
 	}
 }
+
+@keyframes circle-animation {
+	0% {
+		stroke-dashoffset: 0px;
+		// stroke: #4f9cc8;
+	}
+}
