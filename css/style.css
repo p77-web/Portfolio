@@ -883,7 +883,7 @@ li:nth-child(5) {
   position: relative;
   background-image: url("../../img/winter.jpg");
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 100% 100vh;
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
@@ -891,6 +891,10 @@ li:nth-child(5) {
   @supports (grid-column: 1/2) {
     .about {
       grid-column: grid-start / grid-end; } }
+  @media only screen and (min-width: 37.5em) {
+    .about {
+      background-size: cover;
+      transform: scale(1.1, 1.1); } }
   .about__wrapper {
     display: flex;
     flex-direction: row;
