@@ -19,7 +19,7 @@ const changeLoadValue = function(time) {
 	}, time / 100);
 
 	setInterval(function() {
-		overlay.setAttribute('style', 'background-color: rgba(0, 0, 0, 0); transition: background-color 1s ease-out;');
+		overlay.setAttribute('style', 'background-color: rgba(0, 0, 0, 0); z-index: -1; transition: background-color 1s ease-out;');
 		counter_wrapper.setAttribute('style', 'display: none;');
 	}, time + 500);
 	circle.setAttribute('style', 'display: none;');

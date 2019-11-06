@@ -30,6 +30,13 @@ body {
 	// perspective: 1px;
 }
 
+img,
+embed,
+object,
+video {
+	max-width: 100%;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;

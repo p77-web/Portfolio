@@ -96,7 +96,9 @@
 	&__inactive {
 		text-decoration: none;
 		position: absolute;
-		left: 0%;
+		width: 30px;
+		height: 28px;
+		left: 50%;
 		top: 0%;
 		opacity: 0;
 		transform: translateY(-50%);
@@ -110,7 +112,7 @@
 	&:hover &__inactive {
 		opacity: 1;
 		color: $primary-color;
-		transform: translateY(25%);
+		transform: translateY(50%);
 	}
 
 	&__icon {
