@@ -21,6 +21,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 100%;
+	z-index: -5;
 
 	&__wrapper {
 		display: flex;

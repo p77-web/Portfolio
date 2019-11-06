@@ -886,7 +886,8 @@ li:nth-child(5) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100%; }
+  height: 100%;
+  z-index: -5; }
   @supports (grid-column: 1/2) {
     .about {
       grid-column: grid-start / grid-end; } }
@@ -1238,7 +1239,7 @@ li:nth-child(5) {
     transition: transform 0.5s 1.2s; }
   .projects__image {
     justify-self: center;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("../../img/maracana-project.png");
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("../../img/maracana-project.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 25rem;

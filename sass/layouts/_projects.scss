@@ -37,7 +37,7 @@
 			row-gap: 7rem;
 			justify-content: center;
 			width: 100%;
-			
+
 			@include responsive(smaller-phone) {
 				grid-template-columns: repeat(auto-fit, minmax(45rem, min-content));
 			}
@@ -86,7 +86,7 @@
 			padding-left: 0;
 			padding-right: 0;
 			margin-bottom: 0;
-			
+
 			@include responsive(tab-port) {
 				grid-template-columns: min-content 1fr;
 				grid-template-rows: 25% 50% 25%;
@@ -131,7 +131,7 @@
 
 	&__image {
 		justify-self: center;
-		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url('../../img/maracana-project.png');
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url('../../img/maracana-project.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		width: 25rem;
@@ -193,7 +193,6 @@
 
 		transform: translateY(-125%);
 		transition: transform 0.5s 0.2s, opacity 0.5s;
-
 	}
 
 	@supports (justify-self: center) {
@@ -201,7 +200,7 @@
 			justify-self: center;
 			align-self: center;
 			padding-top: 0;
-			
+
 			@include responsive(tab-port) {
 				transform: translateX(-125%);
 				transition: transform 0.5s 0.2s, opacity 0.5s;
@@ -274,7 +273,6 @@
 			}
 		}
 	}
-
 
 	&__icon {
 		cursor: pointer;
