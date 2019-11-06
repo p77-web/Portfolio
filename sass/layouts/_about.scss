@@ -17,16 +17,13 @@
 	position: relative;
 	background-image: url('../../img/winter.jpg');
 	background-attachment: fixed;
-	background-size: 100% 100vh;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 100%;
-	z-index: -5;
-
-	@include responsive(phone) {
-		background-size: cover;
-		transform: scale(1.1, 1.1);
-	}
 
 	&__wrapper {
 		display: flex;
