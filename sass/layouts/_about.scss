@@ -13,17 +13,22 @@
 		}
 	}
 
-	padding: 0 20%;
+	padding: 0 10%;
 	position: relative;
 	background-image: url('../../img/winter.jpg');
 	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 100%;
+
+	@include responsive(smaller-phone) {
+		padding: 0 15%;
+	}
+
+	@include responsive(phone) {
+		padding: 0 20%;
+	}
 
 	&__wrapper {
 		display: flex;

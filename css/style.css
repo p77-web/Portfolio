@@ -207,8 +207,7 @@ video {
       font-size: 3.5rem; } }
 
 .heading-3 {
-  font-size: 2rem;
-  text-transform: uppercase; }
+  font-size: 2rem; }
   .heading-3--maracana {
     color: #e63737; }
   @media only screen and (min-width: 56.25em) {
@@ -377,17 +376,11 @@ video {
   position: relative; }
 
 #scroll-arrow {
-  bottom: 7rem;
-  position: fixed;
-  right: 0.5rem;
   height: 2rem;
   width: 2rem; }
-  @media only screen and (min-width: 31.25em) {
-    #scroll-arrow {
-      right: 2rem; } }
 
 .scroll-top {
-  bottom: 7rem;
+  bottom: 15rem;
   position: fixed;
   right: 0.5rem;
   height: 2rem;
@@ -879,13 +872,10 @@ li:nth-child(5) {
 * about style
 */
 .about {
-  padding: 0 20%;
+  padding: 0 10%;
   position: relative;
   background-image: url("../../img/winter.jpg");
   background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -893,6 +883,12 @@ li:nth-child(5) {
   @supports (grid-column: 1/2) {
     .about {
       grid-column: grid-start / grid-end; } }
+  @media only screen and (min-width: 31.25em) {
+    .about {
+      padding: 0 15%; } }
+  @media only screen and (min-width: 37.5em) {
+    .about {
+      padding: 0 20%; } }
   .about__wrapper {
     display: flex;
     flex-direction: row;
@@ -1388,7 +1384,8 @@ li:nth-child(5) {
 */
 .contact {
   background-color: #202020;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   @supports (grid-column: 1/2) and (display: grid) {
     .contact {
       grid-column: grid-start / grid-end;
@@ -1415,7 +1412,6 @@ li:nth-child(5) {
         height: 6rem; } }
   @supports (justify-content: space-around) and (justify-self: center) {
     .contact__icons {
-      display: flex;
       justify-self: center;
       justify-content: space-around;
       align-items: flex-end; } }

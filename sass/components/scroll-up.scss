@@ -1,16 +1,10 @@
 #scroll-arrow {
-	bottom: 7rem;
-	position: fixed;
-	right: 0.5rem;
 	height: 2rem;
 	width: 2rem;
-
-	@include responsive(smaller-phone) {
-		right: 2rem;
-	}
 }
+
 .scroll-top {
-	bottom: 7rem;
+	bottom: 15rem;
 	position: fixed;
 	right: 0.5rem;
 	height: 2rem;

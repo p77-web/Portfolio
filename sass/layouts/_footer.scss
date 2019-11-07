@@ -7,7 +7,8 @@
 */
 .contact {
 	background-color: $footer-bg-color;
-	position: relative;	
+	position: relative;
+	overflow: hidden;
 
 	@supports (grid-column: 1 / 2) and (display: grid) {
 		& {
@@ -46,7 +47,6 @@
 
 	@supports (justify-content: space-around) and (justify-self: center) {
 		&__icons {
-			display: flex;
 			justify-self: center;
 			justify-content: space-around;
 			align-items: flex-end;
