@@ -47,7 +47,6 @@ They will take the browser setting, meaning 16px. Em is a better choise for medi
 */
 @import url("https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900|Saira:100,200,300,400,500,600,700,800,900&display=swap");
 @keyframes slideIn {
-  from { }
   to {
     transform: translateY(0); } }
 
@@ -306,6 +305,7 @@ video {
   background-color: transparent;
   border: none;
   border-radius: 1rem;
+  z-index: 10;
   transition: all 0.3s; }
   @media only screen and (min-width: 37.5em) {
     .btn, .btn:link, .btn:visited {
@@ -1390,8 +1390,7 @@ li:nth-child(5) {
 */
 .contact {
   background-color: #202020;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   @supports (grid-column: 1/2) and (display: grid) {
     .contact {
       grid-column: grid-start / grid-end;

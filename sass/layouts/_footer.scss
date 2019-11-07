@@ -8,7 +8,6 @@
 .contact {
 	background-color: $footer-bg-color;
 	position: relative;
-	overflow: hidden;
 
 	@supports (grid-column: 1 / 2) and (display: grid) {
 		& {
