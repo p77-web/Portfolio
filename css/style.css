@@ -376,8 +376,14 @@ video {
   position: relative; }
 
 #scroll-arrow {
+  bottom: 15rem;
+  position: fixed;
+  right: 0.5rem;
   height: 2rem;
   width: 2rem; }
+  @media only screen and (min-width: 31.25em) {
+    #scroll-arrow {
+      right: 2rem; } }
 
 .scroll-top {
   bottom: 15rem;
