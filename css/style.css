@@ -1390,7 +1390,8 @@ li:nth-child(5) {
 */
 .contact {
   background-color: #202020;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   @supports (grid-column: 1/2) and (display: grid) {
     .contact {
       grid-column: grid-start / grid-end;
