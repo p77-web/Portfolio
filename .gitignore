@@ -2,6 +2,7 @@ node_modules
 css/header1.css
 img/img-unused
 js/test.js
+.vscode/
 sass/abstracts/_functions.scss
 sass/base/_utilities.scss
 sass/components/_curlyBrackets.scss

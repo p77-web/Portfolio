@@ -21,10 +21,10 @@ var language = {
 		about_me: 'About me',
 		experience: 'Experience',
 		experience_text:
-			"I'm currently based in beautiful Montreal. After I finished my studies at UQAM as a computer engineer I've worked for two years as web developer. Prior to that I had studied Law but I turned my sights to computer programming for its international appeal.",
+			"I'm currently based in beautiful Montreal. After I finished my studies at UQAM as a computer engineer I've worked for two years as a web developer. Prior to that I had studied Law but I turned my sights to computer programming for its international appeal.",
 		time: 'Pass time',
 		time_text:
-			"Coding but, if I'm not at home coding, I like to play soccer, volleyball or to go hiking and camping. However, more importlantly, I enjoy expending my knowledge throught online cources and tutorials.",
+			'I enjoy expending my knowledge throught online courses and tutorials. However, if I am not at home coding, I like to play soccer, volleyball or to go hiking and camping.',
 
 		// Languages section
 		skills: 'Skills',
@@ -51,7 +51,7 @@ var language = {
 			"Je suis actuellement basé dans la belle ville de Montréal. Après mes études à l’UQAM en tant qu’ingénieur informaticien, j’ai travaillé pendant deux ans en tant que développeur web. Avant cela, j'avais étudié le droit, mais je me suis tourné vers la programmation informatique pour son attrait international.",
 		time: 'Passe-temps',
 		time_text:
-			"Coder mais, si je ne suis pas chez moi, j'aime jouer au soccer, au volley-ball ou faire de la randonnée et du camping. Cependant, plus important encore, j'aime bien approfondir mes connaissances grâce aux cours en ligne et aux tutoriels.",
+			"Coder, car j'aime bien approfondir mes connaissances grâce aux cours en ligne et aux tutoriels. Cependant, si je ne suis pas chez moi, j'aime jouer au soccer, au volley-ball ou faire de la randonnée et du camping.",
 
 		// Languages section
 		skills: 'Compétences',
@@ -61,8 +61,8 @@ var language = {
 	}
 };
 
-window.addEventListener('unload', function(){
-  localStorage.removeItem('portfolio__language');
+window.addEventListener('unload', function() {
+	localStorage.removeItem('portfolio__language');
 });
 
 function getBrowserLanguage() {
