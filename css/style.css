@@ -1642,6 +1642,22 @@ li:nth-child(5) {
 	transform: translateX(0);
 	transition: transform 0.5s 1.2s;
 }
+.projects__image--maracana {
+	background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.2),
+			rgba(0, 0, 0, 0.1)
+		),
+		url("../../img/maracana-project.jpg");
+}
+.projects__image--jso {
+	background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.2),
+			rgba(0, 0, 0, 0.1)
+		),
+		url("../../img/jso-project.jpg");
+}
 .projects__image {
 	justify-self: center;
 	background-size: cover;
