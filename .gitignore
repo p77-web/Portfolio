@@ -6,6 +6,8 @@ js/test.js
 sass/abstracts/_functions.scss
 sass/base/_utilities.scss
 sass/components/_curlyBrackets.scss
+sass/components/curlyBrackets.css
+sass/components/curlyBrackets.css.map
 sass/layouts/_test.scss
 sass/layouts/_grid.scss
 sass/pages

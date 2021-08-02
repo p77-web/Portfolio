@@ -39,15 +39,24 @@
 			width: 100%;
 
 			@include responsive(smaller-phone) {
-				grid-template-columns: repeat(auto-fit, minmax(45rem, min-content));
+				grid-template-columns: repeat(
+					auto-fit,
+					minmax(45rem, min-content)
+				);
 			}
 
 			@include responsive(phone) {
-				grid-template-columns: repeat(auto-fit, minmax(50rem, min-content));
+				grid-template-columns: repeat(
+					auto-fit,
+					minmax(50rem, min-content)
+				);
 			}
 
 			@include responsive(tab-port) {
-				grid-template-columns: repeat(auto-fit, minmax(70rem, min-content));
+				grid-template-columns: repeat(
+					auto-fit,
+					minmax(70rem, min-content)
+				);
 				align-content: center;
 				column-gap: 7rem;
 			}
@@ -131,7 +140,6 @@
 
 	&__image {
 		justify-self: center;
-		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url('../../img/maracana-project.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		width: 25rem;
@@ -156,10 +164,26 @@
 		@include responsive(tab-port) {
 			grid-row: 1 / span 3;
 		}
+		&--maracana {
+			background: linear-gradient(
+					to bottom,
+					rgba(0, 0, 0, 0.2),
+					rgba(0, 0, 0, 0.1)
+				),
+				url("../../img/maracana-project.jpg");
+		}
+		&--jso {
+			background: linear-gradient(
+					to bottom,
+					rgba(0, 0, 0, 0.2),
+					rgba(0, 0, 0, 0.1)
+				),
+				url("../../img/jso-project.jpg");
+		}
 	}
 
 	&__image::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -174,7 +198,7 @@
 	}
 
 	&__image::after {
-		content: '';
+		content: "";
 		background-color: rgba(0, 0, 0, 0.3);
 		position: absolute;
 		top: 0rem;
@@ -240,7 +264,7 @@
 	}
 
 	&__icons::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -251,7 +275,12 @@
 		transition: transform 0.5s 0.3s;
 
 		@include responsive(tab-port) {
-			background-image: linear-gradient(to top, rgba($white-color, 0.2) 0%, rgba($white-color, 0.7) 50%, rgba($white-color, 0.2) 100%);
+			background-image: linear-gradient(
+				to top,
+				rgba($white-color, 0.2) 0%,
+				rgba($white-color, 0.7) 50%,
+				rgba($white-color, 0.2) 100%
+			);
 		}
 	}
 
@@ -263,13 +292,18 @@
 		}
 
 		&__icons::before {
-			content: '';
+			content: "";
 
 			transform: translateX(-110%);
 			transition: transform 0.5s 0.3s;
 
 			@include responsive(tab-port) {
-				background-image: linear-gradient(to right, rgba($white-color, 0.2) 0%, rgba($white-color, 0.7) 50%, rgba($white-color, 0.2) 100%);
+				background-image: linear-gradient(
+					to right,
+					rgba($white-color, 0.2) 0%,
+					rgba($white-color, 0.7) 50%,
+					rgba($white-color, 0.2) 100%
+				);
 			}
 		}
 	}
