@@ -560,8 +560,10 @@ video {
 }
 
 .btn, .btn:link, .btn:visited {
+  grid-row: 2;
   -ms-grid-row: 5;
   -ms-grid-row-span: 2;
+  grid-column: 2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 4;
   -ms-grid-column-align: end;
@@ -636,6 +638,15 @@ video {
   color: #89bdda;
   max-height: 100%;
   z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .btn__inactive {
@@ -741,7 +752,7 @@ video {
 }
 
 .header h1::after {
-  content: ' Paul';
+  content: " Paul";
   color: #89bdda;
   font-family: "Saira", sans-serif;
 }
@@ -875,7 +886,7 @@ video {
 }
 
 .header-content__subtitle::before {
-  content: '';
+  content: "";
   background-image: url("../../img/small.svg");
   background-size: cover;
   display: inline-block;
@@ -906,7 +917,7 @@ video {
 }
 
 .header-content__subtitle::after {
-  content: '';
+  content: "";
   background-image: url("../../img/big.svg");
   background-size: cover;
   display: inline-block;
@@ -937,7 +948,7 @@ video {
 }
 
 .header-content::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;

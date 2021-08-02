@@ -455,6 +455,9 @@ video {
 	color: #89bdda;
 	max-height: 100%;
 	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .btn__inactive {
@@ -1326,6 +1329,7 @@ li:nth-child(5) {
 .languages .languages__title--4,
 .languages .languages__title--5,
 .languages .languages__title--6 {
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

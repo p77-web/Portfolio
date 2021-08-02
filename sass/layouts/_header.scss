@@ -29,7 +29,7 @@
 	}
 
 	& h1::after {
-		content: ' Paul';
+		content: " Paul";
 		color: $primary-color;
 		font-family: $font-display;
 	}
@@ -65,7 +65,10 @@
 			-ms-grid-row: 2;
 			-ms-grid-row-span: -1;
 			grid-row: 2 / -1;
-			grid-template-columns: minmax(5rem, 1fr) repeat(8, 1fr) minmax(5rem, 1fr);
+			grid-template-columns: minmax(5rem, 1fr) repeat(8, 1fr) minmax(
+					5rem,
+					1fr
+				);
 			border-top: 2px solid $primary-color-lighter;
 			border-bottom: 2px solid $primary-color-lighter;
 		}
@@ -134,8 +137,8 @@
 		}
 
 		&__subtitle::before {
-			content: '';
-			background-image: url('../../img/small.svg');
+			content: "";
+			background-image: url("../../img/small.svg");
 			background-size: cover;
 			display: inline-block;
 			position: relative;
@@ -161,8 +164,8 @@
 		}
 
 		&__subtitle::after {
-			content: '';
-			background-image: url('../../img/big.svg');
+			content: "";
+			background-image: url("../../img/big.svg");
 			background-size: cover;
 			display: inline-block;
 			position: relative;
@@ -189,7 +192,7 @@
 	}
 
 	&-content::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		right: 0;
