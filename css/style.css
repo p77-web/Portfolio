@@ -216,10 +216,12 @@ video {
 	.wrapper {
 		display: grid;
 		grid-template-rows: 100vh;
-		grid-template-columns: [grid-start] minmax(5rem, 1fr) [content-start] repeat(
+		grid-template-columns:
+			[grid-start] minmax(5rem, 1fr) [content-start] repeat(
 				8,
 				[col-start] minmax(min-content, 14rem) [col-end]
-			) [content-end] minmax(5rem, 1fr) [grid-end];
+			)
+			[content-end] minmax(5rem, 1fr) [grid-end];
 	}
 }
 
@@ -269,7 +271,8 @@ video {
 .heading-3 {
 	font-size: 2rem;
 }
-.heading-3--maracana {
+.heading-3--maracana,
+.heading-3--jso {
 	color: #e63737;
 }
 @media only screen and (min-width: 56.25em) {
@@ -451,7 +454,7 @@ video {
 	border: 2px solid #89bdda;
 	color: #89bdda;
 	max-height: 100%;
-	z-index: 5;
+	z-index: 0;
 }
 
 .btn__inactive {
@@ -1612,7 +1615,8 @@ li:nth-child(5) {
 }
 .projects__portfolio:hover .projects__description {
 	filter: blur(0px);
-	transition: all 0.3s ease 1.3s;
+	top: 0;
+	transition: filter 0.3s ease 1.3s, top 0.3s ease;
 }
 @media only screen and (min-width: 56.25em) {
 	.projects__portfolio:hover .projects__image {
@@ -1638,14 +1642,24 @@ li:nth-child(5) {
 	transform: translateX(0);
 	transition: transform 0.5s 1.2s;
 }
-.projects__image {
-	justify-self: center;
+.projects__image--maracana {
 	background: linear-gradient(
 			to bottom,
 			rgba(0, 0, 0, 0.2),
 			rgba(0, 0, 0, 0.1)
 		),
 		url("../../img/maracana-project.jpg");
+}
+.projects__image--jso {
+	background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.2),
+			rgba(0, 0, 0, 0.1)
+		),
+		url("../../img/jso-project.jpg");
+}
+.projects__image {
+	justify-self: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 25rem;
@@ -1723,8 +1737,10 @@ li:nth-child(5) {
 	padding: 0 1rem;
 	color: #30749a;
 	text-align: center;
-	filter: blur(2px);
-	transition: all 0.3s ease 1.3s;
+	/* filter: blur(1px); */
+	position: relative;
+	top: -4rem;
+	transition: all 0.3s ease 1.3s, top 0.3s ease 0.4s;
 }
 @media only screen and (min-width: 56.25em) {
 	.projects__description {
