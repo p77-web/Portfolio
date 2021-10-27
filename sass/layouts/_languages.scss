@@ -7,6 +7,7 @@
 */
 
 .languages {
+	background-color: $primary-color-lighter;
 	position: relative;
 	width: 100%;
 	@supports (grid-column: 1 / 2) {
@@ -113,7 +114,7 @@
 		}
 
 		&--5 {
-			color: $db-color;
+			color: $react-color;
 		}
 
 		&--6 {
@@ -122,31 +123,61 @@
 
 		@supports (-webkit-text-fill-color: transparent) {
 			&--1 {
-				background: linear-gradient(to top, $js-color 0%, $js-color 30%, $white-color 100%);
+				background: linear-gradient(
+					to top,
+					$js-color 0%,
+					$js-color 30%,
+					$white-color 100%
+				);
 				@extend %text;
 			}
 			&--2 {
-				background: linear-gradient(to top, $html-color 0%, $html-color 30%, $white-color 100%);
+				background: linear-gradient(
+					to top,
+					$html-color 0%,
+					$html-color 30%,
+					$white-color 100%
+				);
 				@extend %text;
 			}
 
 			&--3 {
-				background: linear-gradient(to top, $css-color 0%, $css-color 30%, $white-color 100%);
+				background: linear-gradient(
+					to top,
+					$css-color 0%,
+					$css-color 30%,
+					$white-color 100%
+				);
 				@extend %text;
 			}
 
 			&--4 {
-				background: linear-gradient(to top, $java-color 0%, $java-color 30%, $white-color 100%);
+				background: linear-gradient(
+					to top,
+					$java-color 0%,
+					$java-color 30%,
+					$white-color 100%
+				);
 				@extend %text;
 			}
 
 			&--5 {
-				background: linear-gradient(to top, $db-color 0%, $db-color 30%, $white-color 100%);
+				background: linear-gradient(
+					to top,
+					$react-color 0%,
+					$react-color 30%,
+					$white-color 100%
+				);
 				@extend %text;
 			}
 
 			&--6 {
-				background: linear-gradient(to top, $node-color 0%, $node-color 30%, $white-color 100%);
+				background: linear-gradient(
+					to top,
+					$node-color 0%,
+					$node-color 30%,
+					$white-color 100%
+				);
 				@extend %text;
 			}
 		}

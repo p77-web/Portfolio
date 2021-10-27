@@ -817,6 +817,17 @@ video {
   }
 }
 
+.header-content__image {
+  -ms-grid-row: 2;
+  -ms-grid-column: 6;
+  background-image: url("../../img/coding.svg");
+  background-size: cover;
+  display: inline-block;
+  position: relative;
+  width: 166px;
+  height: 100px;
+}
+
 .header-content__title {
   color: #ff5800;
   font-size: 3rem;
@@ -1711,6 +1722,7 @@ li:nth-child(5) {
 * languages style
 */
 .languages {
+  background-color: rgba(137, 189, 218, 0.2);
   position: relative;
   width: 100%;
 }

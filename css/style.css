@@ -271,9 +271,11 @@ video {
 .heading-3 {
 	font-size: 2rem;
 }
-.heading-3--maracana,
-.heading-3--jso {
+.heading-3--maracana {
 	color: #e63737;
+}
+.heading-3--jso {
+	color: #3abd47;
 }
 @media only screen and (min-width: 56.25em) {
 	.heading-3 {
@@ -600,6 +602,16 @@ video {
 		border-bottom: 2px solid rgba(137, 189, 218, 0.2);
 	}
 }
+/* .header-content__image {
+	grid-row: 2;
+	grid-column: 6;
+	background-image: url("../../img/coding.svg");
+	background-size: cover;
+	display: inline-block;
+	position: relative;
+	width: 166px;
+	height: 100px;
+} */
 @supports (grid-column: grid) {
 	.header-content__title {
 		grid-row-start: 3;
